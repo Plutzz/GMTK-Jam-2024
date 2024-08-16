@@ -9,16 +9,20 @@ public class BlockPlacer : MonoBehaviour
     [SerializeField] private float maxSize;
     [SerializeField] private float minSize;
     [SerializeField] private float changeFactor;
+
     // False if block is shrinking true if growing
 
     [SerializeField] private bool growShrink;
+    
     private Rigidbody2D blockBody;
-
+    private Collider2D blockCollider;
 
     private void Start()
     {
         blockBody = gameObject.GetComponent<Rigidbody2D>();
         blockBody.gravityScale = 0;
+        blockCollider = gameObject.GetComponent<Collider2D>();
+        blockCollider.enabled = false;
     }
     private void Update()
     {
@@ -31,9 +35,10 @@ public class BlockPlacer : MonoBehaviour
         if (maxSize < gameObject.transform.localScale.x) { growShrink = false;  }
         if (minSize > gameObject.transform.localScale.x) { growShrink = true; }
 
-        if(Input.GetKeyDown(KeyCode.Mouse1))
+        if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             blockBody.gravityScale = 1;
+            blockCollider.enabled = true;
             Destroy(this);
         }
     }
