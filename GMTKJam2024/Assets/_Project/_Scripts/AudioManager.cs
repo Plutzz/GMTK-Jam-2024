@@ -17,6 +17,7 @@ public class AudioManager : SingletonPersistent<AudioManager>
     public enum Sounds
     {
         PlayerDamage,
+        Test
     }
 
     //Use this for sounds that may be repeated very quickly Ex: a bunch of towers shooting
