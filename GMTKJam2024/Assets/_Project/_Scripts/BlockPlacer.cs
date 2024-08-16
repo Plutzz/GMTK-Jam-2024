@@ -12,7 +12,14 @@ public class BlockPlacer : MonoBehaviour
     // False if block is shrinking true if growing
 
     [SerializeField] private bool growShrink;
+    private Rigidbody2D blockBody;
 
+
+    private void Start()
+    {
+        blockBody = gameObject.GetComponent<Rigidbody2D>();
+        blockBody.gravityScale = 0;
+    }
     private void Update()
     {
         gameObject.transform.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x ,gameObject.transform.position.y);
@@ -24,9 +31,10 @@ public class BlockPlacer : MonoBehaviour
         if (maxSize < gameObject.transform.localScale.x) { growShrink = false;  }
         if (minSize > gameObject.transform.localScale.x) { growShrink = true; }
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Mouse1))
         {
-            //Turn On gravity disable this script?
+            blockBody.gravityScale = 1;
+            Destroy(this);
         }
     }
 }
