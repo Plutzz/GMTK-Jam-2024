@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 5e268af12c451644dac68bdb2056b2fc
+  productGUID: ddb59d150ed1d8d499909a4ddb16c4e5
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -232,7 +232,6 @@ PlayerSettings:
   iOSMetalForceHardShadows: 0
   metalEditorSupport: 1
   metalAPIValidation: 1
-  metalCompileShaderBinary: 0
   iOSRenderExtraFrameOnPause: 0
   iosCopyPluginsCodeInsteadOfSymlink: 0
   appleDeveloperTeamID: 
@@ -616,7 +615,6 @@ PlayerSettings:
   metroTileBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21568628, a: 0}
   metroSplashScreenBackgroundColor: {r: 0.12941177, g: 0.17254902, b: 0.21568628, a: 1}
   metroSplashScreenUseBackgroundColor: 0
-  syncCapabilities: 0
   platformCapabilities: {}
   metroTargetDeviceFamilies: {}
   metroFTAName: 
@@ -671,10 +669,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: af2f688d-7826-44e0-85ae-f0fc3a318375
+  cloudProjectId: a3cb9b7b-3c40-41b7-a1d4-ca000cec891a
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: GMTKJam2024
+  projectName: GMTKJam2024 2024-08-16_09-05-28
   organizationId: plutzz
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
