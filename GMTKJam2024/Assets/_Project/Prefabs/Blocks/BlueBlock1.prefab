@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6076590897833576833}
   - component: {fileID: 3996118934069831142}
   - component: {fileID: 9100387653961907731}
+  - component: {fileID: -1690446500829357550}
   m_Layer: 0
   m_Name: BlueBlock1
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b5ebf0dca4fea03458b95a9a42f24e38, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 811e6c0dcd9cddc4298b8faa3b273f72, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -175,3 +176,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-1690446500829357550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5685573490230225034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6fa5fa8d55f42c4097f1f45396376f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSize: 2
+  minSize: 1
+  changeFactor: 0.5
+  growShrink: 0
