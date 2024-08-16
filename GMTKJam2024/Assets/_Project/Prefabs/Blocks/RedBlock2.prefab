@@ -190,5 +190,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSize: 2
   minSize: 1
-  changeFactor: 0.5
+  changeFactor: 2
   growShrink: 0
