@@ -5,6 +5,7 @@ using UnityEngine;
 public class WindowCenter : MonoBehaviour
 {
     private SpriteRenderer rend;
+    [SerializeField] private SpriteRenderer background;
     private BoxCollider2D col;
     private Vector2 enterSize;
     private Vector3 scaleOther;
@@ -13,7 +14,7 @@ public class WindowCenter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rend = GetComponentInParent<SpriteRenderer>();
+        rend = transform.parent.GetComponent<SpriteRenderer>();
         col = GetComponent<BoxCollider2D>();
     }
 
@@ -22,6 +23,10 @@ public class WindowCenter : MonoBehaviour
     {
         //col.size = new Vector3(rend.size.x - borderSize, rend.size.y - borderSize);
         transform.localScale = new Vector3(rend.size.x, rend.size.y, 1f);
+        if(background != null)
+        {
+            background.size = new Vector2(rend.size.x, rend.size.y);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

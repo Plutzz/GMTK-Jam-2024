@@ -10,5 +10,6 @@ public class DesktopApplication : MonoBehaviour
     {
         Debug.Log(applicationName);
         Instantiate(applicationWindow);
+        AudioManager.Instance.PlaySound(AudioManager.Sounds.blip2);
     }
 }
