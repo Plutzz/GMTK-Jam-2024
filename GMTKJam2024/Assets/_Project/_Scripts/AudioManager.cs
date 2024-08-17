@@ -16,8 +16,17 @@ public class AudioManager : SingletonPersistent<AudioManager>
 
     public enum Sounds
     {
-        PlayerDamage,
-        Test
+        blip1,
+        blip2,
+        blip3,
+        blip4,
+        click,
+        pickupCoin1,
+        pickupCoin2,
+        pickupCoin3,
+        pickupCoin4,
+        powerupUp,
+        random,
     }
 
     //Use this for sounds that may be repeated very quickly Ex: a bunch of towers shooting
@@ -86,7 +95,7 @@ public class AudioManager : SingletonPersistent<AudioManager>
         public AudioClip audioClip;
 
         [SerializeField, Range(0f, 1f)]
-        public float volume;
+        public float volume = 1;
     }
 
 }
