@@ -5,6 +5,7 @@ using UnityEngine;
 public class WindowSize : MonoBehaviour
 {
     [SerializeField] private bool rightScaleX, leftScaleX, scaleY;
+    [SerializeField] private float minXSize = 0.25f, minYSize = 0.25f;
     private SpriteRenderer rend;
     private BoxCollider2D col;
     private Vector3 mousePosition;
@@ -51,18 +52,18 @@ public class WindowSize : MonoBehaviour
         {
             transform.position = new Vector3(mousePos.x, transform.position.y);
             rend.size = new Vector2((transform.parent.position.x - mousePos.x) * -2, rend.size.y);
-            if(rend.size.x < 0.25f)
+            if(rend.size.x < minXSize)
             {
-                rend.size = new Vector2(0.25f, rend.size.y);
+                rend.size = new Vector2(minXSize, rend.size.y);
             }
         }
         if(scaleY)
         {
             transform.position = new Vector3(transform.position.x, mousePos.y);
             rend.size = new Vector2(rend.size.x, (transform.parent.position.y - mousePos.y) * 2);
-            if (rend.size.y < 0.25f)
+            if (rend.size.y < minYSize)
             {
-                rend.size = new Vector2(rend.size.x, 0.25f);
+                rend.size = new Vector2(rend.size.x, minYSize);
             }
         }
        
