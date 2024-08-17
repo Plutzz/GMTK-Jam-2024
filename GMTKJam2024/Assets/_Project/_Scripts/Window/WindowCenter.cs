@@ -9,6 +9,7 @@ public class WindowCenter : MonoBehaviour
     private Vector2 enterSize;
     private Vector3 scaleOther;
     [SerializeField] private float borderSize;
+    [SerializeField] private bool scaleEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,7 @@ public class WindowCenter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Scale") && scaleEffect)
         {
             Debug.Log("PlayerEnter");
             enterSize = new Vector3(rend.size.x - borderSize, rend.size.y - borderSize);
@@ -35,7 +36,7 @@ public class WindowCenter : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Scale") && scaleEffect)
         {
             Debug.Log("PlayerStay");
             //collision.transform.localScale = new Vector2(enterSize.y / col.size.y, enterSize.x / col.size.x);

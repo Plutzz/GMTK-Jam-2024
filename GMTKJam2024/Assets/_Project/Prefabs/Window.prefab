@@ -182,6 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   borderSize: 0.1
+  scaleEffect: 0
 --- !u!331 &7564507614899645389
 SpriteMask:
   m_ObjectHideFlags: 0
@@ -244,7 +245,7 @@ GameObject:
   - component: {fileID: 8627866399622446115}
   - component: {fileID: 7037988638140376417}
   m_Layer: 0
-  m_Name: Magnifying Glass
+  m_Name: Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
