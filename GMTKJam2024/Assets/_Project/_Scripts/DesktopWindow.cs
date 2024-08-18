@@ -12,7 +12,6 @@ public class DesktopWindow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rend = GetComponent<SpriteRenderer>();
         rend.size = initWindowSize;
         GameManager.Instance.activeWindow = this;
     }

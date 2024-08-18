@@ -1164,6 +1164,9 @@ MonoBehaviour:
   application: {fileID: 5086678286703380022}
   playerStartPos: {x: -4.53, y: 0.08, z: 0}
   lastLevelInApplication: 0
+  resetWindow: 1
+  resetWindowSize: {x: 17.7, y: 9, z: 1}
+  resetWindowPosition: {x: 0, y: 0.5, z: 0}
 --- !u!1 &737037212444381692
 GameObject:
   m_ObjectHideFlags: 0
@@ -2062,6 +2065,9 @@ MonoBehaviour:
   application: {fileID: 5086678286703380022}
   playerStartPos: {x: 5.48, y: -2.51, z: 0}
   lastLevelInApplication: 0
+  resetWindow: 1
+  resetWindowSize: {x: 17.7, y: 9, z: 1}
+  resetWindowPosition: {x: 0, y: 0.5, z: 0}
 --- !u!1 &1137995348267131860
 GameObject:
   m_ObjectHideFlags: 0
@@ -4124,6 +4130,9 @@ MonoBehaviour:
   application: {fileID: 5086678286703380022}
   playerStartPos: {x: -4, y: -1.09, z: 0}
   lastLevelInApplication: 0
+  resetWindow: 1
+  resetWindowSize: {x: 17.7, y: 9, z: 1}
+  resetWindowPosition: {x: 0, y: 0.5, z: 0}
 --- !u!1 &2586783044621699823
 GameObject:
   m_ObjectHideFlags: 0
@@ -4219,6 +4228,7 @@ MonoBehaviour:
   applicationName: Monkey.exe
   applicationWindowPrefab: {fileID: 3791836874618446992, guid: dd7f7fd9440950c4ba3f03a0416cecb1, type: 3}
   firstLevel: {fileID: 3601090739876854040}
+  activeLevel: {fileID: 0}
 --- !u!1 &4578438651183025994
 GameObject:
   m_ObjectHideFlags: 0
@@ -4269,6 +4279,9 @@ MonoBehaviour:
   application: {fileID: 5086678286703380022}
   playerStartPos: {x: -4.2, y: 0.09, z: 0}
   lastLevelInApplication: 0
+  resetWindow: 0
+  resetWindowSize: {x: 17.7, y: 9, z: 1}
+  resetWindowPosition: {x: 0, y: 0.5, z: 0}
 --- !u!1 &5069344627409004300
 GameObject:
   m_ObjectHideFlags: 0
@@ -5690,6 +5703,9 @@ MonoBehaviour:
   application: {fileID: 5086678286703380022}
   playerStartPos: {x: -4.53, y: 0.08, z: 0}
   lastLevelInApplication: 1
+  resetWindow: 1
+  resetWindowSize: {x: 17.7, y: 9, z: 1}
+  resetWindowPosition: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &74185589175636051
 PrefabInstance:
   m_ObjectHideFlags: 0

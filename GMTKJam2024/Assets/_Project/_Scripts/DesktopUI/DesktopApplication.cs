@@ -8,7 +8,7 @@ public class DesktopApplication : MonoBehaviour
     [SerializeField] private string applicationName;
     [SerializeField] private GameObject applicationWindowPrefab;
     [SerializeField] private Level firstLevel;
-    private Level activeLevel;
+    public Level activeLevel;
     private DesktopWindow window;
     public void StartApplication()
     {
@@ -27,6 +27,7 @@ public class DesktopApplication : MonoBehaviour
 
         Debug.Log(applicationName);
         window = Instantiate(applicationWindowPrefab).GetComponent<DesktopWindow>();
+        GameManager.Instance.activeWindow = window;
         window.application = this;
         AudioManager.Instance.PlaySound(AudioManager.Sounds.blip2);
         firstLevel.StartLevel();
