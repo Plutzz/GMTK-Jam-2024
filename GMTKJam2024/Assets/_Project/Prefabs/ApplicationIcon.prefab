@@ -255,52 +255,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &3384948518944793990
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7833690430366237256}
-  - component: {fileID: 8522934807607270166}
-  m_Layer: 0
-  m_Name: Application
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7833690430366237256
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3384948518944793990}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 62273804012112406}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8522934807607270166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3384948518944793990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0b3a6cad6dd3184ab63acf3f0824f29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  applicationName: Monkey.exe
-  applicationWindow: {fileID: 3791836874618446992, guid: dd7f7fd9440950c4ba3f03a0416cecb1, type: 3}
 --- !u!1 &3450975577018790985
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,6 +267,7 @@ GameObject:
   - component: {fileID: 5998022419154769166}
   - component: {fileID: 7589972863328539613}
   - component: {fileID: 3172154067409769786}
+  - component: {fileID: 6537283671626608785}
   m_Layer: 0
   m_Name: ApplicationIcon
   m_TagString: Untagged
@@ -335,7 +290,6 @@ Transform:
   m_Children:
   - {fileID: 8408344139577218843}
   - {fileID: 8604330027169927170}
-  - {fileID: 7833690430366237256}
   - {fileID: 5721245948456400625}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -404,7 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlight: {fileID: 2805652318469875715}
-  application: {fileID: 8522934807607270166}
+  application: {fileID: 6537283671626608785}
 --- !u!61 &3172154067409769786
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -450,6 +404,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &6537283671626608785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3450975577018790985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b3a6cad6dd3184ab63acf3f0824f29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applicationName: Monkey.exe
+  applicationWindow: {fileID: 3791836874618446992, guid: dd7f7fd9440950c4ba3f03a0416cecb1, type: 3}
 --- !u!1 &5263973299595518392
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,7 +496,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 30, y: 40}
+  m_Size: {x: 60, y: 40}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

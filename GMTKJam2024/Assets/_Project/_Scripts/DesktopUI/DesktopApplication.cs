@@ -6,6 +6,7 @@ public class DesktopApplication : MonoBehaviour
 {
     [SerializeField] private string applicationName;
     [SerializeField] private GameObject applicationWindow;
+    [SerializeField] private Vector3 playerStartPos;
     public void StartApplication()
     {
         Debug.Log(applicationName);

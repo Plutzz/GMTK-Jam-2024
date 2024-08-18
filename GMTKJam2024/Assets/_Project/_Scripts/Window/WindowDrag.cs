@@ -10,6 +10,7 @@ public class WindowDrag : MonoBehaviour
     private bool dragging;
     private BoxCollider2D col;
     private SpriteRenderer rend;
+    [SerializeField] private Texture2D hoverCursor, grabCursor;
 
     private void Start()
     {
@@ -27,12 +28,24 @@ public class WindowDrag : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        Cursor.SetCursor(grabCursor, Vector2.one * 16, CursorMode.Auto);
         mousePosition = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.parent.position);
         dragging = true;
     }
     private void OnMouseUp()
     {
         dragging = false;
+        Cursor.SetCursor(hoverCursor, Vector2.one * 16, CursorMode.Auto);
+    }
+
+    private void OnMouseEnter()
+    {
+        Cursor.SetCursor(hoverCursor, Vector2.one * 16, CursorMode.Auto);
+    }
+
+    private void OnMouseExit()
+    {
+        GameManager.Instance.SetDefaultCursor();
     }
 
     private void OnMouseDrag()

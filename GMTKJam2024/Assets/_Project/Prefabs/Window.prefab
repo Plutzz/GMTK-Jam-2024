@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 110d70b6ff347f548a4324744c023e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverCursor: {fileID: 2800000, guid: 0a6195c657cf3f14db4596138acb803a, type: 3}
+  grabCursor: {fileID: 2800000, guid: 3806e77d66b1bc840aeada3bd48c98b4, type: 3}
 --- !u!61 &818110213078668102
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -433,7 +435,7 @@ MonoBehaviour:
   scaleY: 0
   minXSize: 1.5
   minYSize: 1
-  cursor: {fileID: 2800000, guid: ef2bbe14f5700354d99713ace65e33b6, type: 3}
+  cursor: {fileID: 2800000, guid: 4c5ebb0580b202a42b268e053be0f1ad, type: 3}
 --- !u!1 &4779963623521272421
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,7 +531,7 @@ MonoBehaviour:
   scaleY: 0
   minXSize: 1.5
   minYSize: 1
-  cursor: {fileID: 2800000, guid: ef2bbe14f5700354d99713ace65e33b6, type: 3}
+  cursor: {fileID: 2800000, guid: 4c5ebb0580b202a42b268e053be0f1ad, type: 3}
 --- !u!1 &8116044978500890530
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,4 +627,4 @@ MonoBehaviour:
   scaleY: 1
   minXSize: 1.5
   minYSize: 1
-  cursor: {fileID: 2800000, guid: 5c3ca8cc523642241bcde70c7720ab81, type: 3}
+  cursor: {fileID: 2800000, guid: 5a7f89d5a3440794aa7c5b93129c3f54, type: 3}

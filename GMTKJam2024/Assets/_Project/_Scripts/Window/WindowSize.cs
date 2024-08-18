@@ -53,7 +53,7 @@ public class WindowSize : MonoBehaviour
 
     private void OnMouseExit()
     {
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.ForceSoftware);
+        GameManager.Instance.SetDefaultCursor();
     }
 
     private void OnMouseDrag()
