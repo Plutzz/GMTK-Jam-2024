@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DesktopWindow : MonoBehaviour
 {
+    [SerializeField] private bool applicationWindow; // Check if this is an application window to properly set the GameManager.Instance.activeWindow;
     public DesktopApplication application;
     public SpriteRenderer rend;
     public float borderSize;
@@ -13,7 +14,11 @@ public class DesktopWindow : MonoBehaviour
     void Start()
     {
         rend.size = initWindowSize;
-        GameManager.Instance.activeWindow = this;
+        if(applicationWindow)
+        {
+            GameManager.Instance.activeWindow = this;
+        }
+        
     }
 
     public void CloseWindow()

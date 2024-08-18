@@ -5,6 +5,7 @@ using UnityEngine;
 public class WindowX : MonoBehaviour
 {
     private SpriteRenderer rend;
+    [SerializeField] private bool applyOffset = true;
     [SerializeField] private Vector2 offset;
     // Start is called before the first frame update
     void Start()
@@ -15,7 +16,8 @@ public class WindowX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.localPosition = new Vector2(rend.size.x / 2, rend.size.y / 2) + offset;
+        if(applyOffset)
+            transform.localPosition = new Vector2(rend.size.x / 2, rend.size.y / 2) + offset;
     }
 
     private void OnMouseEnter()
