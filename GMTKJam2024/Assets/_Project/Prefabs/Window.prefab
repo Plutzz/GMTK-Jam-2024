@@ -154,7 +154,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -459,9 +459,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   application: {fileID: 0}
-  rend: {fileID: 0}
+  rend: {fileID: 7037988638140376417}
   borderSize: 0.1
   initWindowSize: {x: 17, y: 9}
+  minXSize: 1.5
+  minYSize: 1
+  maxXSize: 17.7
+  maxYSize: 9
 --- !u!1 &4551668686664935148
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,9 +559,8 @@ MonoBehaviour:
   rightScaleX: 0
   leftScaleX: 1
   scaleY: 0
-  minXSize: 1.5
-  minYSize: 1
   cursor: {fileID: 2800000, guid: 4c5ebb0580b202a42b268e053be0f1ad, type: 3}
+  window: {fileID: 3654967980045976260}
 --- !u!1 &4779963623521272421
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,9 +654,8 @@ MonoBehaviour:
   rightScaleX: 1
   leftScaleX: 0
   scaleY: 0
-  minXSize: 1.5
-  minYSize: 1
   cursor: {fileID: 2800000, guid: 4c5ebb0580b202a42b268e053be0f1ad, type: 3}
+  window: {fileID: 3654967980045976260}
 --- !u!1 &8116044978500890530
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,6 +749,5 @@ MonoBehaviour:
   rightScaleX: 0
   leftScaleX: 0
   scaleY: 1
-  minXSize: 1.5
-  minYSize: 1
   cursor: {fileID: 2800000, guid: 5a7f89d5a3440794aa7c5b93129c3f54, type: 3}
+  window: {fileID: 3654967980045976260}

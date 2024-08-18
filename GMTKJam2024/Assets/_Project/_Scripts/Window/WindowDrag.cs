@@ -4,12 +4,13 @@ using System.Drawing;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class WindowDrag : MonoBehaviour
+public class WindowDrag : MonoBehaviour, IWindowHandle
 {
     private Vector3 mousePosition;
     private bool dragging;
     private BoxCollider2D col;
     private SpriteRenderer rend;
+    private bool needToReset;
     [SerializeField] private Texture2D hoverCursor, grabCursor;
 
     private void Start()
@@ -31,6 +32,7 @@ public class WindowDrag : MonoBehaviour
         Cursor.SetCursor(grabCursor, Vector2.one * 16, CursorMode.Auto);
         mousePosition = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.parent.position);
         dragging = true;
+        needToReset = false;
     }
     private void OnMouseUp()
     {
@@ -50,7 +52,13 @@ public class WindowDrag : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        if (needToReset) return;
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition);
         transform.parent.position = new Vector3(mousePos.x, mousePos.y);
+    }
+
+    public void ForceReset()
+    {
+        needToReset = true;
     }
 }
