@@ -1167,6 +1167,7 @@ MonoBehaviour:
   resetWindow: 1
   resetWindowSize: {x: 17.7, y: 9, z: 1}
   resetWindowPosition: {x: 0, y: 0.5, z: 0}
+  scaleableObjects: []
 --- !u!1 &737037212444381692
 GameObject:
   m_ObjectHideFlags: 0
@@ -2068,6 +2069,7 @@ MonoBehaviour:
   resetWindow: 1
   resetWindowSize: {x: 17.7, y: 9, z: 1}
   resetWindowPosition: {x: 0, y: 0.5, z: 0}
+  scaleableObjects: []
 --- !u!1 &1137995348267131860
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,7 +2191,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.0625, y: 0.0625, z: 0.0625, w: 0.0625}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
@@ -3219,7 +3221,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.0625, y: 0.0625, z: 0.0625, w: 0.0625}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
@@ -3989,7 +3991,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 22.48, y: 22.48, z: 22.48}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4226927216075981188}
@@ -4035,12 +4037,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b721c101a629b7d4fae916388b5cc403, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f7a3dcc4b69fc348b9e13a15024b89f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 2
-  m_Size: {x: 1, y: 1}
+  m_DrawMode: 0
+  m_Size: {x: 2.4, y: 1.35}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4133,6 +4135,7 @@ MonoBehaviour:
   resetWindow: 1
   resetWindowSize: {x: 17.7, y: 9, z: 1}
   resetWindowPosition: {x: 0, y: 0.5, z: 0}
+  scaleableObjects: []
 --- !u!1 &2586783044621699823
 GameObject:
   m_ObjectHideFlags: 0
@@ -4282,6 +4285,7 @@ MonoBehaviour:
   resetWindow: 0
   resetWindowSize: {x: 17.7, y: 9, z: 1}
   resetWindowPosition: {x: 0, y: 0.5, z: 0}
+  scaleableObjects: []
 --- !u!1 &5069344627409004300
 GameObject:
   m_ObjectHideFlags: 0
@@ -4403,7 +4407,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.0625, y: 0.0625, z: 0.0625, w: 0.0625}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
@@ -4578,7 +4582,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.0625, y: 0.0625, z: 0.0625, w: 0.0625}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
@@ -5508,7 +5512,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.0625, y: 0.0625, z: 0.0625, w: 0.0625}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
@@ -5706,6 +5710,7 @@ MonoBehaviour:
   resetWindow: 1
   resetWindowSize: {x: 17.7, y: 9, z: 1}
   resetWindowPosition: {x: 0, y: 0.5, z: 0}
+  scaleableObjects: []
 --- !u!1001 &74185589175636051
 PrefabInstance:
   m_ObjectHideFlags: 0
