@@ -11,6 +11,30 @@ public class Level : MonoBehaviour
     [SerializeField] private bool resetWindow = true;
     [SerializeField] private Vector3 resetWindowSize = new Vector3(17.7f, 9f, 1f);
     [SerializeField] private Vector3 resetWindowPosition = new Vector3(0, 0.5f, 0);
+
+    [SerializeField] private List<ScaleableObject> scaleableObjects = new List<ScaleableObject>();
+
+
+    private void Start()
+    {
+        CheckForObjects(transform);
+    }
+
+    private void CheckForObjects(Transform t)
+    {
+        ScaleableObject so = t.gameObject.GetComponent<ScaleableObject>();
+        if (so != null)
+        {
+            Debug.Log("ADD " + so);
+            scaleableObjects.Add(so);
+        }
+        foreach (Transform child in t)
+        {
+            CheckForObjects(child);
+        }
+    }
+
+
     public void StartLevel()
     {
         application.SetActiveLevel(this);
@@ -51,6 +75,15 @@ public class Level : MonoBehaviour
     public void ResetPlayer()
     {
         ResetWindow();
+        ResetLevel();
         GameManager.Instance.player.transform.position = playerStartPos;
+    }
+
+    public void ResetLevel()
+    {
+        foreach(ScaleableObject so in scaleableObjects)
+        {
+            so.ResetObject();
+        }
     }
 }
