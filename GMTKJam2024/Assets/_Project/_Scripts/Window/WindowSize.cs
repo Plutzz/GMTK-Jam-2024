@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WindowSize : MonoBehaviour
+public class WindowSize : MonoBehaviour, IWindowHandle
 {
     [SerializeField] private bool rightScaleX, leftScaleX, scaleY;
     [SerializeField] private Texture2D cursor;
@@ -11,6 +11,7 @@ public class WindowSize : MonoBehaviour
     private BoxCollider2D col;
     private Vector3 mousePosition;
     private bool dragging;
+    private bool needToReset;
     private void Awake()
     {
         rend = GetComponentInParent<SpriteRenderer>();
@@ -40,6 +41,7 @@ public class WindowSize : MonoBehaviour
     {
         mousePosition = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
         dragging = true;
+        needToReset = false;
     }
     private void OnMouseUp()
     {
@@ -58,6 +60,8 @@ public class WindowSize : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        if (needToReset) return;
+
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition);
         if(rightScaleX)
         {
@@ -100,5 +104,9 @@ public class WindowSize : MonoBehaviour
             }
         }
        
+    }
+    public void ForceReset()
+    {
+        needToReset = true;
     }
 }

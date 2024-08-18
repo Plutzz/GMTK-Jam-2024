@@ -7,6 +7,8 @@ public class Level : MonoBehaviour
     [SerializeField] private DesktopApplication application;
     [SerializeField] private Vector3 playerStartPos;
     [SerializeField] private bool lastLevelInApplication;
+
+    [SerializeField] private bool resetWindow = true;
     [SerializeField] private Vector3 resetWindowSize = new Vector3(17.7f, 9f, 1f);
     [SerializeField] private Vector3 resetWindowPosition = new Vector3(0, 0.5f, 0);
     public void StartLevel()
@@ -16,10 +18,9 @@ public class Level : MonoBehaviour
         gameObject.SetActive(true);
         Debug.Log(GameManager.Instance.activeWindow);
         Debug.Log(GameManager.Instance.activeWindow.rend);
-        if (GameManager.Instance.activeWindow != null && GameManager.Instance.activeWindow.rend != null)
+        if (resetWindow && GameManager.Instance.activeWindow != null && GameManager.Instance.activeWindow.rend != null)
         {
-            GameManager.Instance.activeWindow.rend.size = resetWindowSize;
-            GameManager.Instance.activeWindow.transform.position = resetWindowPosition;
+            ResetWindow();
         }
 
     }
@@ -32,5 +33,18 @@ public class Level : MonoBehaviour
         {
             application.CloseApplication();
         }
+    }
+
+    public void ResetWindow()
+    {
+        foreach(Transform child in GameManager.Instance.activeWindow.transform)
+        {
+            if(child.GetComponent<IWindowHandle>() != null)
+            {
+                child.GetComponent<IWindowHandle>().ForceReset();
+            }
+        }
+        GameManager.Instance.activeWindow.rend.size = resetWindowSize;
+        GameManager.Instance.activeWindow.transform.position = resetWindowPosition;
     }
 }
