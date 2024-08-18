@@ -6,6 +6,7 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private Texture2D defaultCursor;
     [HideInInspector] public GameObject player;
+    [HideInInspector] public DesktopWindow activeWindow;
 
     // Monkey Coins
 
