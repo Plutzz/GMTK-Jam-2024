@@ -13,10 +13,10 @@ public class DialogueManager : Singleton<DialogueManager>
     private Dialogue currentDialogue;
 
     [SerializeField] private GameObject dialogueBox;
-    [SerializeField] private TextMeshProUGUI nameText;
-    [SerializeField] private TextMeshProUGUI dialogueText;
-    [SerializeField] private Image characterImage;
-    private InputManager inputManager;
+    [SerializeField] private TextMeshPro dialogueText;
+    [SerializeField] private GameObject characterImage;
+    private SpriteRenderer characterRend;
+    //private InputManager inputManager;
     //private StudioEventEmitter eventEmitter;
     private DialogueSequence currentSequence;
     private int currentSequenceIndex;
@@ -29,27 +29,28 @@ public class DialogueManager : Singleton<DialogueManager>
     {
         base.Awake();
         sentences = new Queue<string>();
+        characterRend = characterImage.GetComponent<SpriteRenderer>();
     }
 
 
     private void Start()
     {
-        inputManager = InputManager.Instance;
+        //inputManager = InputManager.Instance;
     }
 
     private void OnEnable()
     {
-        inputManager = InputManager.Instance;
+        //inputManager = InputManager.Instance;
     }
 
     private void Update()
     {
-        Debug.Log(inputManager == null);
-        Debug.Log("Pressed: " + inputManager.NextDialoguePressedThisFrame);
-        if(inputManager != null && inputManager.NextDialoguePressedThisFrame)
-        {
-            DisplayNextSentence();
-        }
+        //Debug.Log(inputManager == null);
+        //Debug.Log("Pressed: " + inputManager.NextDialoguePressedThisFrame);
+        //if(inputManager != null && inputManager.NextDialoguePressedThisFrame)
+        //{
+        //    DisplayNextSentence();
+        //}
     }
 
     public void StartDialogueSequence(DialogueSequence sequence)
@@ -74,7 +75,7 @@ public class DialogueManager : Singleton<DialogueManager>
 
     public void StartDialogue(Dialogue dialogue)
     {
-        InputManager.Instance.playerInput.SwitchCurrentActionMap("Cutscene");
+        //InputManager.Instance.playerInput.SwitchCurrentActionMap("Cutscene");
 
         //AudioManager.Instance.PlayOneShot(FMODEvents.NetworkSFXName.DialogueComplete, transform.position);
 
@@ -83,20 +84,17 @@ public class DialogueManager : Singleton<DialogueManager>
         dialogueBox.SetActive(true);
         
 
-        if(nameText != null )
-            nameText.text = dialogue.name;
-
         if (characterImage != null)
         {
             if(dialogue.characterSprite == null)
             {
-                characterImage.enabled = false;
+                characterImage.SetActive(false);
             }
 
             else
             {
-                characterImage.enabled = true;
-                characterImage.sprite = dialogue.characterSprite;
+                characterImage.SetActive(true);
+                characterRend.sprite = dialogue.characterSprite;
             }
             
         }

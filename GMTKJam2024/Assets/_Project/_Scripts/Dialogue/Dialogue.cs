@@ -8,7 +8,7 @@ using UnityEngine.UI;
 [System.Serializable]
 public class Dialogue
 {
-    public string name;                 // Name of NPC
+    //public string name;                 // Name of NPC
     //public GameObject dialogueBox;
     //public TextMeshProUGUI dialogueText;
     //public TextMeshProUGUI nameText;
