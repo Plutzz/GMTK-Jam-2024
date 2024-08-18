@@ -50,7 +50,7 @@ public class Level : MonoBehaviour
 
     public void ResetPlayer()
     {
+        ResetWindow();
         GameManager.Instance.player.transform.position = playerStartPos;
-
     }
 }
