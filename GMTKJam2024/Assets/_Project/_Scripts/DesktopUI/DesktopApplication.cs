@@ -11,6 +11,17 @@ public class DesktopApplication : MonoBehaviour
     private GameObject window;
     public void StartApplication()
     {
+        if(window != null)
+        {
+            Destroy(window);
+        }
+
+        if(activeLevel != null)
+        {
+            activeLevel.gameObject.SetActive(false);
+            activeLevel = null;
+        }
+
         Debug.Log(applicationName);
         window = Instantiate(applicationWindowPrefab);
         AudioManager.Instance.PlaySound(AudioManager.Sounds.blip2);
@@ -20,7 +31,7 @@ public class DesktopApplication : MonoBehaviour
     public void CloseApplication()
     {
         Destroy(window);
-        //activeLevel.EndLevel();
+        activeLevel = null;
     }
 
     public void SetActiveLevel(Level _level)
