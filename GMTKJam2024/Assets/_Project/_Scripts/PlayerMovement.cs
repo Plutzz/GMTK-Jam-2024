@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        GameManager.Instance.player = gameObject;
     }
 
     void Update()

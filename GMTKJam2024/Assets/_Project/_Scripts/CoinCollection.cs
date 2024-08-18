@@ -11,6 +11,7 @@ public class CoinCollection : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Add to coins collected counter
+            AudioManager.Instance.PlaySound(AudioManager.Sounds.pickupCoin1);
             Destroy(gameObject);
         }
     }

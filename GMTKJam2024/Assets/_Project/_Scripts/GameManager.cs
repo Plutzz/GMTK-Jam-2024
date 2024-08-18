@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private Texture2D defaultCursor;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {

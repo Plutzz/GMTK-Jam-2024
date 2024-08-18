@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee89aea43895dc342a88ebe61e06d109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initWindowSize: {x: 10, y: 5}
+  initWindowSize: {x: 17, y: 9}
 --- !u!1 &4551668686664935148
 GameObject:
   m_ObjectHideFlags: 0
