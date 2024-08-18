@@ -24,6 +24,7 @@ public class DesktopApplication : MonoBehaviour
 
         Debug.Log(applicationName);
         window = Instantiate(applicationWindowPrefab);
+        window.GetComponent<DesktopWindow>().application = this;
         AudioManager.Instance.PlaySound(AudioManager.Sounds.blip2);
         firstLevel.StartLevel();
     }
@@ -31,6 +32,7 @@ public class DesktopApplication : MonoBehaviour
     public void CloseApplication()
     {
         Destroy(window);
+        activeLevel?.gameObject.SetActive(false);
         activeLevel = null;
     }
 

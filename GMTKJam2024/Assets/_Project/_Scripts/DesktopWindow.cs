@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DesktopWindow : MonoBehaviour
 {
+    public DesktopApplication application;
     private SpriteRenderer rend;
     [SerializeField] Vector2 initWindowSize;
     // Start is called before the first frame update
@@ -13,9 +14,15 @@ public class DesktopWindow : MonoBehaviour
         rend.size = initWindowSize;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CloseWindow()
     {
-        
+        if(application != null)
+        {
+            application.CloseApplication();
+        }
+
+        Destroy(gameObject);
     }
+
+
 }
