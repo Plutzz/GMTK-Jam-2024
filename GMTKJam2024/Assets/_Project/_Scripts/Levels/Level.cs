@@ -47,4 +47,10 @@ public class Level : MonoBehaviour
         GameManager.Instance.activeWindow.rend.size = resetWindowSize;
         GameManager.Instance.activeWindow.transform.position = resetWindowPosition;
     }
+
+    public void ResetPlayer()
+    {
+        GameManager.Instance.player.transform.position = playerStartPos;
+
+    }
 }
