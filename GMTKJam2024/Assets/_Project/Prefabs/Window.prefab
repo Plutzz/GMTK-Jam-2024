@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   application: {fileID: 0}
-  rend: {fileID: 0}
+  rend: {fileID: 7037988638140376417}
   borderSize: 0.1
   initWindowSize: {x: 17, y: 9}
   minXSize: 1.5

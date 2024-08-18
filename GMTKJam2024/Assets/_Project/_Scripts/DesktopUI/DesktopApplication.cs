@@ -27,6 +27,7 @@ public class DesktopApplication : MonoBehaviour
 
         Debug.Log(applicationName);
         window = Instantiate(applicationWindowPrefab).GetComponent<DesktopWindow>();
+        GameManager.Instance.activeWindow = window;
         window.application = this;
         AudioManager.Instance.PlaySound(AudioManager.Sounds.blip2);
         firstLevel.StartLevel();

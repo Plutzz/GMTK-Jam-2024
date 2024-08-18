@@ -398,6 +398,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1300251337193570662, guid: d6e2c4844b1b51e4bb40d4923ca9bf27, type: 3}
+      propertyPath: resetWindowPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3259145219414767597, guid: d6e2c4844b1b51e4bb40d4923ca9bf27, type: 3}
+      propertyPath: resetWindowPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3601090739876854040, guid: d6e2c4844b1b51e4bb40d4923ca9bf27, type: 3}
+      propertyPath: resetWindowPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968428946080396069, guid: d6e2c4844b1b51e4bb40d4923ca9bf27, type: 3}
+      propertyPath: resetWindowPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4226927216075981188, guid: d6e2c4844b1b51e4bb40d4923ca9bf27, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -441,6 +457,10 @@ PrefabInstance:
     - target: {fileID: 4545117854014678434, guid: d6e2c4844b1b51e4bb40d4923ca9bf27, type: 3}
       propertyPath: m_Name
       value: Monkey.exe
+      objectReference: {fileID: 0}
+    - target: {fileID: 8542277604489619502, guid: d6e2c4844b1b51e4bb40d4923ca9bf27, type: 3}
+      propertyPath: resetWindowPosition.y
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
