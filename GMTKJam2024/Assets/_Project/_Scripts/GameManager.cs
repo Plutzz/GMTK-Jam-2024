@@ -47,6 +47,6 @@ public class GameManager : Singleton<GameManager>
     public void CollectCoin()
     {
         CoinsCollected++;
-        coinPopup.DoPopup();
+        coinPopup?.DoPopup();
     }
 }
