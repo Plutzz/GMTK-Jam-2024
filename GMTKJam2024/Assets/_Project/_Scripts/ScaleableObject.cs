@@ -33,10 +33,8 @@ public class ScaleableObject : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("EnterS");
         if (collision.transform.parent == GameManager.Instance.activeWindow.transform)
         {
-            Debug.Log("EnterS");
             enterWindowSize = new Vector3(GameManager.Instance.activeWindow.rend.size.x - GameManager.Instance.activeWindow.borderSize, GameManager.Instance.activeWindow.rend.size.y - GameManager.Instance.activeWindow.borderSize);
             enterScale = transform.localScale;        
         }
@@ -48,7 +46,6 @@ public class ScaleableObject : MonoBehaviour
         Debug.Log(GameManager.Instance.activeWindow.gameObject);
         if (collision.transform.parent == GameManager.Instance.activeWindow.transform)
         {
-            Debug.Log("StayS");
             //collision.transform.localScale = new Vector2(enterSize.y / col.size.y, enterSize.x / col.size.x);
             transform.localScale = new Vector2((GameManager.Instance.activeWindow.rend.size.x - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.x * enterScale.x, (GameManager.Instance.activeWindow.rend.size.y - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.y * enterScale.y);        
         }
@@ -56,10 +53,8 @@ public class ScaleableObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("EnterS");
         if (collision.transform.parent == GameManager.Instance.activeWindow.transform)
         {
-            Debug.Log("EnterS");
             enterWindowSize = new Vector3(GameManager.Instance.activeWindow.rend.size.x - GameManager.Instance.activeWindow.borderSize, GameManager.Instance.activeWindow.rend.size.y - GameManager.Instance.activeWindow.borderSize);
             enterScale = transform.localScale;
         }
@@ -71,10 +66,17 @@ public class ScaleableObject : MonoBehaviour
         Debug.Log(GameManager.Instance.activeWindow.gameObject);
         if (collision.transform.parent == GameManager.Instance.activeWindow.transform)
         {
-            Debug.Log("StayS");
             //collision.transform.localScale = new Vector2(enterSize.y / col.size.y, enterSize.x / col.size.x);
             transform.localScale = new Vector2((GameManager.Instance.activeWindow.rend.size.x - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.x * enterScale.x, (GameManager.Instance.activeWindow.rend.size.y - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.y * enterScale.y);
         }
+    }
+
+    public void ResetObject()
+    {
+        gameObject.SetActive(false);
+        enterScale = initScale;
+        transform.localScale = initScale;
+        gameObject.SetActive(true);
     }
 
 
