@@ -7,15 +7,16 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MonkeyTile
+  m_Name: Discord
   m_Shader: {fileID: -6465566751694194690, guid: db586ecbdb1d6b641a6e72dd7306ca7e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _TILED
-  - _USENORMAL
+  - _TILETYPE_MONKEYTILE
+  - _USENORMALS
   m_InvalidKeywords:
   - _CENTERED
+  - _USENORMAL
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -26,12 +27,36 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _CreepyNormal:
+        m_Texture: {fileID: 2800000, guid: 9d259e71a26ebc043958f2009c54de61, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CreepyTexture:
+        m_Texture: {fileID: 2800000, guid: 75ad367f407a13f40bdf9339558511d7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: b721c101a629b7d4fae916388b5cc403, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MonkeyNormal:
+        m_Texture: {fileID: 2800000, guid: fffdb4bd321afe648bc63e9804304de7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MonkeyTexture:
+        m_Texture: {fileID: 2800000, guid: 2ff91002b29b7ac46a73ba3e16122ce5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _NormalMap:
         m_Texture: {fileID: 2800000, guid: aa7c7aacfc43d4343a27d6bb1ff5bcb6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _StandardNormal:
+        m_Texture: {fileID: 2800000, guid: 74e98fb56e22dba448d68a47c761911c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _StandardTexture:
+        m_Texture: {fileID: 2800000, guid: 4abee4f4bfc3ca049928fbb677a31bfe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture:
@@ -54,9 +79,13 @@ Material:
     m_Floats:
     - _CENTERED: 1
     - _Float: 1.5
-    - _TILED: 1
-    - _TextureScale: 16.56
+    - _NoiseAmount: 2.59
+    - _TILED: 0
+    - _TILETYPE: 1
+    - _TextureScale: 11.5
+    - _USENOISE: 0
     - _USENORMAL: 1
+    - _USENORMALS: 1
     - _offset: 0.125
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 0}
