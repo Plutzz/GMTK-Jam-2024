@@ -24,5 +24,10 @@ public class DesktopWindow : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void ResizeWindow(Vector2 _size)
+    {
+        rend.size = _size;
+    }
+
 
 }

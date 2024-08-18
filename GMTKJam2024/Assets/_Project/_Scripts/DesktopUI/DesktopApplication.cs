@@ -22,6 +22,8 @@ public class DesktopApplication : MonoBehaviour
             activeLevel = null;
         }
 
+        GameManager.Instance.player.SetActive(true);
+
         Debug.Log(applicationName);
         window = Instantiate(applicationWindowPrefab);
         window.GetComponent<DesktopWindow>().application = this;
@@ -34,6 +36,7 @@ public class DesktopApplication : MonoBehaviour
         Destroy(window);
         activeLevel?.gameObject.SetActive(false);
         activeLevel = null;
+        GameManager.Instance.player.SetActive(false);
     }
 
     public void SetActiveLevel(Level _level)
