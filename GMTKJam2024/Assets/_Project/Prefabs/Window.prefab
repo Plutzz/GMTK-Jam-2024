@@ -185,7 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   background: {fileID: 0}
   borderSize: 0.1
-  scaleEffect: 0
+  scaleEffect: 1
 --- !u!331 &7564507614899645389
 SpriteMask:
   m_ObjectHideFlags: 0

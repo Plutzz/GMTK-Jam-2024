@@ -45,7 +45,7 @@ public class WindowCenter : MonoBehaviour
         {
             Debug.Log("PlayerStay");
             //collision.transform.localScale = new Vector2(enterSize.y / col.size.y, enterSize.x / col.size.x);
-            collision.transform.localScale = new Vector2((rend.size.y - borderSize) / enterSize.y * scaleOther.x, (rend.size.y - borderSize) / enterSize.y * scaleOther.y);
+            collision.transform.localScale = new Vector2((rend.size.x - borderSize) / enterSize.x * scaleOther.x, (rend.size.y - borderSize) / enterSize.y * scaleOther.y);
         }
     }
 
