@@ -17,6 +17,11 @@ public class DesktopApplication : MonoBehaviour
             window.CloseWindow();
         }
 
+        if(GameManager.Instance.activeWindow != null)
+        {
+            GameManager.Instance.activeWindow.CloseWindow();
+        }
+
         if(activeLevel != null)
         {
             activeLevel.gameObject.SetActive(false);
