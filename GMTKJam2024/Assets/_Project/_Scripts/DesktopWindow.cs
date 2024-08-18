@@ -5,13 +5,15 @@ using UnityEngine;
 public class DesktopWindow : MonoBehaviour
 {
     public DesktopApplication application;
-    private SpriteRenderer rend;
+    public SpriteRenderer rend;
+    public float borderSize;
     [SerializeField] Vector2 initWindowSize;
     // Start is called before the first frame update
     void Start()
     {
         rend = GetComponent<SpriteRenderer>();
         rend.size = initWindowSize;
+        GameManager.Instance.activeWindow = this;
     }
 
     public void CloseWindow()
@@ -20,7 +22,7 @@ public class DesktopWindow : MonoBehaviour
         {
             application.CloseApplication();
         }
-
+        GameManager.Instance.SetDefaultCursor();
         Destroy(gameObject);
     }
 

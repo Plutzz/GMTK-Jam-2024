@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 9096942013758753115}
   - component: {fileID: 4020540435262358849}
   - component: {fileID: 7564507614899645389}
+  - component: {fileID: 8413599198365733365}
   m_Layer: 2
   m_Name: CenterCollider
   m_TagString: Untagged
@@ -275,7 +276,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 0}
-  borderSize: 0.1
   scaleEffect: 1
 --- !u!331 &7564507614899645389
 SpriteMask:
@@ -328,6 +328,33 @@ SpriteMask:
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 0
   m_SpriteSortPoint: 0
+--- !u!50 &8413599198365733365
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3497279833542557804}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3791836874618446992
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +459,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   application: {fileID: 0}
+  rend: {fileID: 0}
+  borderSize: 0.1
   initWindowSize: {x: 17, y: 9}
 --- !u!1 &4551668686664935148
 GameObject:

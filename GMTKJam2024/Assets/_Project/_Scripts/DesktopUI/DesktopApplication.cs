@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DesktopApplication : MonoBehaviour
@@ -8,12 +9,12 @@ public class DesktopApplication : MonoBehaviour
     [SerializeField] private GameObject applicationWindowPrefab;
     [SerializeField] private Level firstLevel;
     private Level activeLevel;
-    private GameObject window;
+    private DesktopWindow window;
     public void StartApplication()
     {
         if(window != null)
         {
-            Destroy(window);
+            window.CloseWindow();
         }
 
         if(activeLevel != null)
@@ -25,15 +26,16 @@ public class DesktopApplication : MonoBehaviour
         GameManager.Instance.player.SetActive(true);
 
         Debug.Log(applicationName);
-        window = Instantiate(applicationWindowPrefab);
-        window.GetComponent<DesktopWindow>().application = this;
+        window = Instantiate(applicationWindowPrefab).GetComponent<DesktopWindow>();
+        window.application = this;
         AudioManager.Instance.PlaySound(AudioManager.Sounds.blip2);
         firstLevel.StartLevel();
     }
 
     public void CloseApplication()
     {
-        Destroy(window);
+        window.application = null;
+        window.CloseWindow();
         activeLevel?.gameObject.SetActive(false);
         activeLevel = null;
         GameManager.Instance.player.SetActive(false);
