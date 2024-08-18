@@ -5,7 +5,14 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private Texture2D defaultCursor;
-    public GameObject player;
+    [HideInInspector] public GameObject player;
+
+    // Monkey Coins
+
+    [HideInInspector] public CoinPopup coinPopup;
+    public int CoinsCollected { get; private set; } = 0;
+    public int TotalCoins { get; private set; } = 20;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +24,11 @@ public class GameManager : Singleton<GameManager>
     void Update()
     {
         CheckForSoundEffects();
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            coinPopup.DoPopup();
+        }
     }
 
     public void SetDefaultCursor()
@@ -30,5 +42,11 @@ public class GameManager : Singleton<GameManager>
         {
             AudioManager.Instance.PlaySound(AudioManager.Sounds.click);
         }
+    }
+
+    public void CollectCoin()
+    {
+        CoinsCollected++;
+        coinPopup.DoPopup();
     }
 }

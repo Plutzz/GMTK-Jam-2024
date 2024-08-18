@@ -12,6 +12,7 @@ public class CoinCollection : MonoBehaviour
         {
             // Add to coins collected counter
             AudioManager.Instance.PlaySound(AudioManager.Sounds.pickupCoin1);
+            GameManager.Instance.CollectCoin();
             Destroy(gameObject);
         }
     }
