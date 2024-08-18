@@ -8,6 +8,7 @@ public class DesktopWindow : MonoBehaviour
     public SpriteRenderer rend;
     public float borderSize;
     [SerializeField] Vector2 initWindowSize;
+    public float minXSize = 0.25f, minYSize = 0.25f, maxXSize = 17.7f, maxYSize = 5f;
     // Start is called before the first frame update
     void Start()
     {

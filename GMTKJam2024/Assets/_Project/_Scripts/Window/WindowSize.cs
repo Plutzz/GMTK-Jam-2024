@@ -5,8 +5,8 @@ using UnityEngine;
 public class WindowSize : MonoBehaviour
 {
     [SerializeField] private bool rightScaleX, leftScaleX, scaleY;
-    [SerializeField] private float minXSize = 0.25f, minYSize = 0.25f;
     [SerializeField] private Texture2D cursor;
+    [SerializeField] private DesktopWindow window;
     private SpriteRenderer rend;
     private BoxCollider2D col;
     private Vector3 mousePosition;
@@ -63,27 +63,40 @@ public class WindowSize : MonoBehaviour
         {
             transform.position = new Vector3(mousePos.x, transform.position.y);
             rend.size = new Vector2((transform.parent.position.x - mousePos.x) * -2, rend.size.y);
-            if(rend.size.x < minXSize)
+            if(rend.size.x < window.minXSize)
             {
-                rend.size = new Vector2(minXSize, rend.size.y);
+                rend.size = new Vector2(window.minXSize, rend.size.y);
             }
+            if (rend.size.x > window.maxXSize)
+            {
+                rend.size = new Vector2(window.maxXSize, rend.size.y);
+            }
+
         }
         if (leftScaleX)
         {
             transform.position = new Vector3(mousePos.x, transform.position.y);
             rend.size = new Vector2((transform.parent.position.x - mousePos.x) * 2, rend.size.y);
-            if (rend.size.x < minXSize)
+            if (rend.size.x < window.minXSize)
             {
-                rend.size = new Vector2(minXSize, rend.size.y);
+                rend.size = new Vector2(window.minXSize, rend.size.y);
+            }
+            if (rend.size.x > window.maxXSize)
+            {
+                rend.size = new Vector2(window.maxXSize, rend.size.y);
             }
         }
         if (scaleY)
         {
             transform.position = new Vector3(transform.position.x, mousePos.y);
             rend.size = new Vector2(rend.size.x, (transform.parent.position.y - mousePos.y) * 2);
-            if (rend.size.y < minYSize)
+            if (rend.size.y < window.minYSize)
             {
-                rend.size = new Vector2(rend.size.x, minYSize);
+                rend.size = new Vector2(rend.size.x, window.minYSize);
+            }
+            if (rend.size.y > window.maxYSize)
+            {
+                rend.size = new Vector2(rend.size.x, window.maxYSize);
             }
         }
        
