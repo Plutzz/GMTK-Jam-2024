@@ -8,7 +8,7 @@ public class CoinPopup : MonoBehaviour
 {
     [SerializeField] private Vector3 popupPosition;
     private Vector3 initialPosition;
-    [SerializeField] private Ease ease;
+    [SerializeField] private Ease easeIn, easeOut;
     [SerializeField] private float popupTime;
     [SerializeField] private float waitDuration;
     [SerializeField] private TextMeshProUGUI coinText;
@@ -23,13 +23,13 @@ public class CoinPopup : MonoBehaviour
     public void DoPopup()
     {
         coinText.text = GameManager.Instance.CoinsCollected + "/" + GameManager.Instance.TotalCoins;
-        transform.DOLocalMove(popupPosition, popupTime).SetEase(ease);
+        transform.DOLocalMove(popupPosition, popupTime).SetEase(easeIn);
         StartCoroutine(Wait());
     }
 
     public IEnumerator Wait()
     {
         yield return new WaitForSeconds(waitDuration);
-        transform.DOLocalMove(initialPosition, popupTime).SetEase(ease);
+        transform.DOLocalMove(initialPosition, popupTime).SetEase(easeOut);
     }
 }
