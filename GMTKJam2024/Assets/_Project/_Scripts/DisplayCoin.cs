@@ -6,6 +6,8 @@ public class DisplayCoin : MonoBehaviour
 {
     [SerializeField] private int coinAmount;
     [SerializeField] private int startCoinId;
+    [SerializeField] private Sprite collected;
+    [SerializeField] private Sprite notCollected;
 
     [SerializeField]private List<GameObject> coinList = new List<GameObject>();
     // Start is called before the first frame update
@@ -14,7 +16,9 @@ public class DisplayCoin : MonoBehaviour
     {
         for(int i = startCoinId; i < coinAmount+startCoinId; i++)
         {
-            coinList[i].SetActive(GameManager.Instance.coinCollector.collectedCoins[i]);
+            if (GameManager.Instance.coinCollector.collectedCoins[i]) { coinList[i - startCoinId].GetComponent<SpriteRenderer>().sprite = collected; }
+            
+            else { coinList[i - startCoinId].GetComponent<SpriteRenderer>().sprite = notCollected; }
         }
     }
 }
