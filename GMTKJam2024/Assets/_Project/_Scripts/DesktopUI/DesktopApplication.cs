@@ -8,7 +8,7 @@ public class DesktopApplication : MonoBehaviour
     [SerializeField] private string applicationName;
     [SerializeField] private GameObject applicationWindowPrefab;
     [SerializeField] private Level firstLevel;
-    private Level activeLevel;
+    public Level activeLevel;
     private DesktopWindow window;
     public void StartApplication()
     {

@@ -33,4 +33,10 @@ public class Level : MonoBehaviour
             application.CloseApplication();
         }
     }
+
+    public void ResetPlayer()
+    {
+        GameManager.Instance.player.transform.position = playerStartPos;
+
+    }
 }
