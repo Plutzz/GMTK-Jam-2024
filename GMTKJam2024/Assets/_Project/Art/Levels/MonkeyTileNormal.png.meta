@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6729cd712ac5db14d9a8a63d40246ad6
+guid: de9307f5832bc594ca4fb86bfb8daba1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -18,8 +18,8 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 1
     externalNormalMap: 0
-    heightScale: 0.25
-    normalMapFilter: 0
+    heightScale: 0.15
+    normalMapFilter: 1
     flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
