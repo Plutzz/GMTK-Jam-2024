@@ -463,7 +463,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample text
+  m_text: 'the end is never the end is never the end the end is never the end is
+    never the end the end is never the end is never the end the end is never the
+    end is never the end the end is never the end is never the end the end is never
+    the end is never the end '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -855,8 +858,13 @@ MonoBehaviour:
     actionOnComplete:
       m_PersistentCalls:
         m_Calls: []
+    skippableByClick: 1
     sentences:
     - HELLO MY FRIEND I AM A FRIEND
+    - 1
+    - 2
+    - HELLO M3
+    - 4
 --- !u!4 &2031983218
 Transform:
   m_ObjectHideFlags: 0

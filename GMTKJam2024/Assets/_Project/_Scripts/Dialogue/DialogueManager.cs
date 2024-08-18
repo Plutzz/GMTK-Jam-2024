@@ -47,10 +47,10 @@ public class DialogueManager : Singleton<DialogueManager>
     {
         //Debug.Log(inputManager == null);
         //Debug.Log("Pressed: " + inputManager.NextDialoguePressedThisFrame);
-        //if(inputManager != null && inputManager.NextDialoguePressedThisFrame)
-        //{
-        //    DisplayNextSentence();
-        //}
+        if (Input.GetMouseButtonDown(0))
+        {
+            DisplayNextSentence();
+        }
     }
 
     public void StartDialogueSequence(DialogueSequence sequence)

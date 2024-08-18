@@ -15,7 +15,7 @@ public class Dialogue
     public Sprite characterSprite;
    // public Image characterImage;
     public UnityEvent actionOnComplete;
-
+    public bool skippableByClick;
 
     [TextArea(3, 10)]
     public string[] sentences;          // All of the sentences the NPC will say
