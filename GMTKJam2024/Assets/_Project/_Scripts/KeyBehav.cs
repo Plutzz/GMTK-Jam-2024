@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeyBehav : MonoBehaviour
+public class KeyBehav : MonoBehaviour, IResetable
 {
     [SerializeField] private GameObject[] doors;
     private void OnTriggerEnter2D(Collider2D other)
@@ -16,7 +16,7 @@ public class KeyBehav : MonoBehaviour
         }
         
     }
-    public void ResetKey()
+    public void ResetObject()
     {
         Debug.Log("ResetKey");
         foreach (GameObject door in doors)

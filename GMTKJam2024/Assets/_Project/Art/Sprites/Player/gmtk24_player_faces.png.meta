@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1c02e892649ad374b97c3a9845d658be
+guid: 25d166bc9dc8b984aa0a1a6cdf814562
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 125
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NewFlag-SpriteSheet_0
+      name: gmtk24_player_faces_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6940e09012a97504c94d8769c74fe332
-      internalID: 457784607
+      spriteID: 7c1c864ab5854b940951ff9685fdfc98
+      internalID: 888644680
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewFlag-SpriteSheet_1
+      name: gmtk24_player_faces_1
       rect:
         serializedVersion: 2
         x: 128
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc2757372f9c1c84489a8fc1f46e5847
-      internalID: -1108287446
+      spriteID: bb41ea2a8dcdb4c4d9d12b12b5a07638
+      internalID: -953042187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewFlag-SpriteSheet_2
+      name: gmtk24_player_faces_2
       rect:
         serializedVersion: 2
         x: 0
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c576151e60c2e0146a27e129d3dbf0c0
-      internalID: 66823433
+      spriteID: 41dad84dc690d6b4bb46a7e9eb262c20
+      internalID: 659863657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewFlag-SpriteSheet_3
+      name: gmtk24_player_faces_3
       rect:
         serializedVersion: 2
         x: 128
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fa6d097632dd79429e95754d1e7dce6
-      internalID: 1053766213
+      spriteID: 67320b6b780208044bbaf967789b0992
+      internalID: -1971628838
       vertices: []
       indices: 
       edges: []
@@ -217,10 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NewFlag-SpriteSheet_0: 457784607
-      NewFlag-SpriteSheet_1: -1108287446
-      NewFlag-SpriteSheet_2: 66823433
-      NewFlag-SpriteSheet_3: 1053766213
+      gmtk24_player_faces_0: 888644680
+      gmtk24_player_faces_1: -953042187
+      gmtk24_player_faces_2: 659863657
+      gmtk24_player_faces_3: -1971628838
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

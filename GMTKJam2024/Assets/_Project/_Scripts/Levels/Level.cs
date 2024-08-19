@@ -13,8 +13,7 @@ public class Level : MonoBehaviour
     [SerializeField] private Vector3 resetWindowSize = new Vector3(17.7f, 9f, 1f);
     [SerializeField] private Vector3 resetWindowPosition = new Vector3(0, 0.5f, 0);
 
-    [SerializeField] private List<ScaleableObject> scaleableObjects = new List<ScaleableObject>();
-    [SerializeField] private List<KeyBehav> keys = new List<KeyBehav>();
+    [SerializeField] private List<IResetable> resetableObjects = new List<IResetable>();
 
 
     private void Start()
@@ -24,8 +23,7 @@ public class Level : MonoBehaviour
 
     private void CheckForObjects(Transform t)
     {
-        ScaleableObject _so = t.gameObject.GetComponent<ScaleableObject>();
-        KeyBehav _key = t.gameObject.GetComponent<KeyBehav>();
+        IResetable _obj = t.gameObject.GetComponent<IResetable>();
         SpriteRenderer _rend = t.gameObject.GetComponent<SpriteRenderer>();
         TilemapRenderer _tileRend = t.gameObject.GetComponent<TilemapRenderer>();
 
@@ -39,14 +37,10 @@ public class Level : MonoBehaviour
             _tileRend.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
         }
 
-        if (_so != null)
+        if (_obj != null)
         {
-            Debug.Log("ADD " + _so);
-            scaleableObjects.Add(_so);
-        }
-        if(_key != null)
-        {
-            keys.Add(_key);
+            Debug.Log("ADD " + _obj);
+            resetableObjects.Add(_obj);
         }
         foreach (Transform child in t)
         {
@@ -59,7 +53,7 @@ public class Level : MonoBehaviour
     {
         gameObject.SetActive(true);
         application.SetActiveLevel(this);
-        ResetLevel();
+        
         GameManager.Instance.player.transform.position = playerStartPos;
         Debug.Log(GameManager.Instance.activeWindow);
         Debug.Log(GameManager.Instance.activeWindow.rend);
@@ -67,7 +61,7 @@ public class Level : MonoBehaviour
         {
             ResetWindow();
         }
-
+        ResetLevel();
     }
 
     public void EndLevel()
@@ -102,14 +96,10 @@ public class Level : MonoBehaviour
 
     public void ResetLevel()
     {
-        foreach(ScaleableObject _so in scaleableObjects)
+        foreach(IResetable _obj in resetableObjects)
         {
-            _so.ResetObject();
+            _obj.ResetObject();
         }
 
-        foreach(KeyBehav _key in keys)
-        {
-            _key.ResetKey();
-        }
     }
 }
