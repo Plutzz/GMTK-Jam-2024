@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7332066421120958682}
   - component: {fileID: 5121951078230538020}
-  - component: {fileID: 3359713174514218634}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Kill
+  m_TagString: Safe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,20 +77,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3359713174514218634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 589238002680366517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b35b6be58d593148b4f83acac8b2b64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rend: {fileID: 5429212010861071032}
-  offset: {x: 0, y: 0}
 --- !u!1 &3478639181308768926
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,6 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7042933535619243043}
   - component: {fileID: 5429212010861071032}
+  - component: {fileID: -2409244719466125963}
   m_Layer: 0
   m_Name: PathwayBlock
   m_TagString: Untagged
@@ -175,5 +161,22 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &-2409244719466125963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3478639181308768926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3fb7ee31466f434baeceffd379eec62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enterWindowSize: {x: 0, y: 0, z: 0}
+  enterScale: {x: 0, y: 0, z: 0}
+  initScale: {x: 0, y: 0, z: 0}
+  minScale: {x: 0.1, y: 0.1, z: 1}
+  colliderObject: {fileID: 589238002680366517}
