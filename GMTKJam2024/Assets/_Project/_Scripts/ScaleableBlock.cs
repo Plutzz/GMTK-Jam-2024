@@ -7,10 +7,14 @@ public class ScaleableBlock : ScaleableObject
     [SerializeField] protected GameObject colliderObject;
     protected SpriteRenderer rend;
 
-    protected override void Start()
+    private void Awake()
     {
         rend = GetComponent<SpriteRenderer>();
         initScale = new Vector3(rend.size.x, rend.size.y, 1f);
+    }
+
+    protected override void Start()
+    {
         colliderObject.transform.localScale = initScale;
 
         if (GameManager.Instance.activeWindow != null)

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Level : MonoBehaviour
 {
@@ -25,6 +26,19 @@ public class Level : MonoBehaviour
     {
         ScaleableObject _so = t.gameObject.GetComponent<ScaleableObject>();
         KeyBehav _key = t.gameObject.GetComponent<KeyBehav>();
+        SpriteRenderer _rend = t.gameObject.GetComponent<SpriteRenderer>();
+        TilemapRenderer _tileRend = t.gameObject.GetComponent<TilemapRenderer>();
+
+        if( _rend != null )
+        {
+            _rend.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+        }
+
+        if (_tileRend != null)
+        {
+            _tileRend.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+        }
+
         if (_so != null)
         {
             Debug.Log("ADD " + _so);
