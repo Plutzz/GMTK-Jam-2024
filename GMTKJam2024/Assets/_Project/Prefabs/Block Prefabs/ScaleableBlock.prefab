@@ -180,3 +180,4 @@ MonoBehaviour:
   initScale: {x: 0, y: 0, z: 0}
   minScale: {x: 0.1, y: 0.1, z: 1}
   colliderObject: {fileID: 7611491476915471195}
+  inverseScale: 0
