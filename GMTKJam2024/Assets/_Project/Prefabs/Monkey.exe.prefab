@@ -1185,7 +1185,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3267910334582610283}
-  - component: {fileID: 1967348430327250823}
   m_Layer: 0
   m_Name: Shadows
   m_TagString: Untagged
@@ -1215,19 +1214,6 @@ Transform:
   - {fileID: 1403393172377946348}
   m_Father: {fileID: 7977645801270427964}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1967348430327250823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 236759451161188077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
 --- !u!1 &244940321781525186
 GameObject:
   m_ObjectHideFlags: 0
@@ -2625,7 +2611,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6484889288244034907}
-  - component: {fileID: 1179663021994907589}
   m_Layer: 0
   m_Name: Shadows
   m_TagString: Untagged
@@ -2652,19 +2637,6 @@ Transform:
   - {fileID: 1409598426516051806}
   m_Father: {fileID: 2150196766196805778}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1179663021994907589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1077476420771816670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
 --- !u!1 &1147754244606406789
 GameObject:
   m_ObjectHideFlags: 0
@@ -5594,6 +5566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2095095826947859443}
   - component: {fileID: 3968428946080396069}
+  - component: {fileID: 9038036371305308765}
   m_Layer: 0
   m_Name: Level2
   m_TagString: Untagged
@@ -5640,6 +5613,19 @@ MonoBehaviour:
   resetWindowPosition: {x: 0, y: 0.5, z: 0}
   scaleableObjects: []
   keys: []
+--- !u!114 &9038036371305308765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2435943491736283407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
 --- !u!1 &2458336178696492692
 GameObject:
   m_ObjectHideFlags: 0
@@ -6375,7 +6361,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7945034698272988734}
-  - component: {fileID: 191014159118286595}
   m_Layer: 0
   m_Name: Shadows
   m_TagString: Untagged
@@ -6423,19 +6408,6 @@ Transform:
   - {fileID: 632044992506612433}
   m_Father: {fileID: 1318932408116089790}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &191014159118286595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3635188668100987090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
 --- !u!1 &3666259347188290777
 GameObject:
   m_ObjectHideFlags: 0
@@ -7651,7 +7623,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4539298024753720026}
-  - component: {fileID: 4213909358740206722}
   m_Layer: 0
   m_Name: Shadows
   m_TagString: Untagged
@@ -7696,19 +7667,6 @@ Transform:
   - {fileID: 4540387569817868084}
   m_Father: {fileID: 1361482981990135054}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4213909358740206722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4910370690597728174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
 --- !u!1 &5183314529001251580
 GameObject:
   m_ObjectHideFlags: 0
@@ -7842,7 +7800,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6523080900147901210}
-  - component: {fileID: 8852185621328708262}
   m_Layer: 0
   m_Name: Shadows
   m_TagString: Untagged
@@ -7880,19 +7837,6 @@ Transform:
   - {fileID: 3676669089914462873}
   m_Father: {fileID: 5329108981184795188}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8852185621328708262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5225469002928284244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
 --- !u!1 &5276676039672251754
 GameObject:
   m_ObjectHideFlags: 0
@@ -7964,7 +7908,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8636799668163256547}
-  - component: {fileID: 4269119817104818529}
   m_Layer: 0
   m_Name: Shadows
   m_TagString: Untagged
@@ -7991,19 +7934,6 @@ Transform:
   - {fileID: 683109388942849237}
   m_Father: {fileID: 4064600184393693745}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4269119817104818529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5293250857478474109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
 --- !u!1 &5362112040617561037
 GameObject:
   m_ObjectHideFlags: 0
@@ -8384,7 +8314,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3713298887547154720}
-  - component: {fileID: 3632793330832918844}
   m_Layer: 0
   m_Name: Shadows
   m_TagString: Untagged
@@ -8413,19 +8342,6 @@ Transform:
   - {fileID: 854659810583165290}
   m_Father: {fileID: 3047768483255041018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3632793330832918844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5745922074903029671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
 --- !u!1 &5771829170214980498
 GameObject:
   m_ObjectHideFlags: 0
@@ -10712,6 +10628,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1027516799906044687}
+  - component: {fileID: 1010537442275387242}
   m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
@@ -10742,6 +10659,19 @@ Transform:
   - {fileID: 5711298461944501954}
   m_Father: {fileID: 4226927216075981188}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1010537442275387242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6413317250038385709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
 --- !u!1 &6611239692389715535
 GameObject:
   m_ObjectHideFlags: 0
@@ -12094,7 +12024,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 429289354500225093}
-  - component: {fileID: 6925768428634497559}
   m_Layer: 0
   m_Name: Shadows
   m_TagString: Untagged
@@ -12121,19 +12050,6 @@ Transform:
   - {fileID: 3997808968349358438}
   m_Father: {fileID: 7853068279588274228}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6925768428634497559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7986791538383304885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
 --- !u!1 &7998703253906892966
 GameObject:
   m_ObjectHideFlags: 0
