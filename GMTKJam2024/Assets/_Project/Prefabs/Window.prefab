@@ -466,7 +466,7 @@ MonoBehaviour:
   dragging: 0
   initWindowSize: {x: 17.5, y: 8.75}
   lerpSpeed: 0.01
-  borderLerpSpeed: 0
+  borderLerpSpeed: 10
   minXSize: 1.5
   minYSize: 1
   maxXSize: 17.5

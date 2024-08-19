@@ -36,6 +36,7 @@ public class ScaleableObject : MonoBehaviour
         }
         if (GameManager.Instance.activeWindow != null)
         {
+
             transform.localScale = new Vector2((GameManager.Instance.activeWindow.rend.size.x - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.x * enterScale.x, (GameManager.Instance.activeWindow.rend.size.y - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.y * enterScale.y);
         }
     }
