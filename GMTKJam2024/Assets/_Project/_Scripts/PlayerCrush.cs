@@ -7,8 +7,12 @@ public class PlayerCrush : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(gameObject.GetComponent<BoxCollider2D>() == collision.otherCollider || collision.gameObject.tag.Equals("Kill")) 
-          GameManager.Instance.activeWindow.application.activeLevel.ResetPlayer();
-        
+        GameManager.Instance.activeWindow.application.activeLevel.ResetPlayer();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Kill"))
+            GameManager.Instance.activeWindow.application.activeLevel.ResetPlayer();
     }
 }

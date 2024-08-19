@@ -13,6 +13,7 @@ public class Level : MonoBehaviour
     [SerializeField] private Vector3 resetWindowPosition = new Vector3(0, 0.5f, 0);
 
     [SerializeField] private List<ScaleableObject> scaleableObjects = new List<ScaleableObject>();
+    [SerializeField] private List<KeyBehav> keys = new List<KeyBehav>();
 
 
     private void Start()
@@ -22,11 +23,16 @@ public class Level : MonoBehaviour
 
     private void CheckForObjects(Transform t)
     {
-        ScaleableObject so = t.gameObject.GetComponent<ScaleableObject>();
-        if (so != null)
+        ScaleableObject _so = t.gameObject.GetComponent<ScaleableObject>();
+        KeyBehav _key = t.gameObject.GetComponent<KeyBehav>();
+        if (_so != null)
         {
-            Debug.Log("ADD " + so);
-            scaleableObjects.Add(so);
+            Debug.Log("ADD " + _so);
+            scaleableObjects.Add(_so);
+        }
+        if(_key != null)
+        {
+            keys.Add(_key);
         }
         foreach (Transform child in t)
         {
@@ -39,6 +45,7 @@ public class Level : MonoBehaviour
     {
         gameObject.SetActive(true);
         application.SetActiveLevel(this);
+        ResetLevel();
         GameManager.Instance.player.transform.position = playerStartPos;
         Debug.Log(GameManager.Instance.activeWindow);
         Debug.Log(GameManager.Instance.activeWindow.rend);
@@ -81,9 +88,14 @@ public class Level : MonoBehaviour
 
     public void ResetLevel()
     {
-        foreach(ScaleableObject so in scaleableObjects)
+        foreach(ScaleableObject _so in scaleableObjects)
         {
-            so.ResetObject();
+            _so.ResetObject();
+        }
+
+        foreach(KeyBehav _key in keys)
+        {
+            _key.ResetKey();
         }
     }
 }
