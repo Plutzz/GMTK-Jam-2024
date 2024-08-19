@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CoinCollection : MonoBehaviour
 {
-
+    [SerializeField] private int coinId;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Coin Enter");
@@ -13,6 +13,7 @@ public class CoinCollection : MonoBehaviour
             // Add to coins collected counter
             AudioManager.Instance.PlaySound(AudioManager.Sounds.pickupCoin1);
             GameManager.Instance.CollectCoin();
+            GameManager.Instance.coinCollector.CoinActive(coinId);
             Destroy(gameObject);
         }
     }

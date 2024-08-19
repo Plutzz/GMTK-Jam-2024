@@ -10,6 +10,7 @@ public class WindowSize : MonoBehaviour, IWindowHandle
     private SpriteRenderer rend;
     private BoxCollider2D col;
     private Vector3 mousePosition;
+    private Vector3 initialRendSize;
     private bool dragging;
     private bool needToReset;
     private void Awake()
@@ -40,6 +41,7 @@ public class WindowSize : MonoBehaviour, IWindowHandle
     private void OnMouseDown()
     {
         mousePosition = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+        initialRendSize = rend.size;
         dragging = true;
         needToReset = false;
     }
@@ -66,44 +68,39 @@ public class WindowSize : MonoBehaviour, IWindowHandle
         if(rightScaleX)
         {
             transform.position = new Vector3(mousePos.x, transform.position.y);
-            rend.size = new Vector2((transform.parent.position.x - mousePos.x) * -2, rend.size.y);
-            if(rend.size.x < window.minXSize)
-            {
-                rend.size = new Vector2(window.minXSize, rend.size.y);
-            }
-            if (rend.size.x > window.maxXSize)
-            {
-                rend.size = new Vector2(window.maxXSize, rend.size.y);
-            }
-
+            rend.size = new Vector2((transform.parent.position.x - mousePos.x) * -2, (transform.parent.position.y - mousePos.y + (initialRendSize.y / 2)) * 2);
         }
         if (leftScaleX)
         {
+            Debug.Log(mousePos.y);
             transform.position = new Vector3(mousePos.x, transform.position.y);
-            rend.size = new Vector2((transform.parent.position.x - mousePos.x) * 2, rend.size.y);
-            if (rend.size.x < window.minXSize)
-            {
-                rend.size = new Vector2(window.minXSize, rend.size.y);
-            }
-            if (rend.size.x > window.maxXSize)
-            {
-                rend.size = new Vector2(window.maxXSize, rend.size.y);
-            }
+            rend.size = new Vector2((transform.parent.position.x - mousePos.x) * 2, (transform.parent.position.y - mousePos.y + (initialRendSize.y / 2)) * 2);
+     
         }
         if (scaleY)
         {
             transform.position = new Vector3(transform.position.x, mousePos.y);
-            rend.size = new Vector2(rend.size.x, (transform.parent.position.y - mousePos.y) * 2);
-            if (rend.size.y < window.minYSize)
-            {
-                rend.size = new Vector2(rend.size.x, window.minYSize);
-            }
-            if (rend.size.y > window.maxYSize)
-            {
-                rend.size = new Vector2(rend.size.x, window.maxYSize);
-            }
+            rend.size = new Vector2((transform.parent.position.x - mousePos.x + (initialRendSize.x / 2)) * 2, (transform.parent.position.y - mousePos.y) * 2);
         }
-       
+
+        if (rend.size.x < window.minXSize)
+        {
+            rend.size = new Vector2(window.minXSize, rend.size.y);
+        }
+        if (rend.size.x > window.maxXSize)
+        {
+            rend.size = new Vector2(window.maxXSize, rend.size.y);
+        }
+
+        if (rend.size.y < window.minYSize)
+        {
+            rend.size = new Vector2(rend.size.x, window.minYSize);
+        }
+        if (rend.size.y > window.maxYSize)
+        {
+            rend.size = new Vector2(rend.size.x, window.maxYSize);
+        }
+
     }
     public void ForceReset()
     {

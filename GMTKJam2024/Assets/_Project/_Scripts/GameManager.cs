@@ -7,7 +7,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private Texture2D defaultCursor;
     [HideInInspector] public GameObject player;
     [HideInInspector] public DesktopWindow activeWindow;
-
+    [HideInInspector] public CoinCollectTracker coinCollector;
     // Monkey Coins
 
     [HideInInspector] public CoinPopup coinPopup;
@@ -17,6 +17,7 @@ public class GameManager : Singleton<GameManager>
     // Start is called before the first frame update
     void Start()
     {
+        coinCollector = new CoinCollectTracker(50);
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.ForceSoftware);
     }

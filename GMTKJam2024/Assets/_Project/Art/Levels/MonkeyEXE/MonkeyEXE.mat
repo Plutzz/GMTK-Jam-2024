@@ -12,7 +12,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _TILETYPE_MONKEYTILE
+  - _TILETYPE_STANDARDTILE
   - _USENORMALS
   m_InvalidKeywords:
   - _CENTERED
@@ -81,8 +81,8 @@ Material:
     - _Float: 1.5
     - _NoiseAmount: 0
     - _TILED: 0
-    - _TILETYPE: 1
-    - _TextureScale: 3.42
+    - _TILETYPE: 0
+    - _TextureScale: 20
     - _USENOISE: 0
     - _USENORMAL: 1
     - _USENORMALS: 1

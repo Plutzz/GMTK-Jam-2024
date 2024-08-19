@@ -12,6 +12,11 @@ public class ScaleableObject : MonoBehaviour
     private void Start()
     {
         initScale = transform.localScale;
+        if(GameManager.Instance.activeWindow != null)
+        {
+            enterWindowSize = new Vector3(GameManager.Instance.activeWindow.rend.size.x - GameManager.Instance.activeWindow.borderSize, GameManager.Instance.activeWindow.rend.size.y - GameManager.Instance.activeWindow.borderSize);
+            enterScale = transform.localScale;
+        }
     }
 
     private void OnDisable()
@@ -29,52 +34,16 @@ public class ScaleableObject : MonoBehaviour
         {
             transform.localScale = new Vector3(transform.localScale.x, minScale.y, transform.localScale.z);
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.transform.parent == GameManager.Instance.activeWindow.transform)
+        if (GameManager.Instance.activeWindow != null)
         {
-            enterWindowSize = new Vector3(GameManager.Instance.activeWindow.rend.size.x - GameManager.Instance.activeWindow.borderSize, GameManager.Instance.activeWindow.rend.size.y - GameManager.Instance.activeWindow.borderSize);
-            enterScale = transform.localScale;        
-        }
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        Debug.Log(collision.transform.parent);
-        Debug.Log(GameManager.Instance.activeWindow.gameObject);
-        if (collision.transform.parent == GameManager.Instance.activeWindow.transform)
-        {
-            //collision.transform.localScale = new Vector2(enterSize.y / col.size.y, enterSize.x / col.size.x);
-            transform.localScale = new Vector2((GameManager.Instance.activeWindow.rend.size.x - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.x * enterScale.x, (GameManager.Instance.activeWindow.rend.size.y - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.y * enterScale.y);        
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.transform.parent == GameManager.Instance.activeWindow.transform)
-        {
-            enterWindowSize = new Vector3(GameManager.Instance.activeWindow.rend.size.x - GameManager.Instance.activeWindow.borderSize, GameManager.Instance.activeWindow.rend.size.y - GameManager.Instance.activeWindow.borderSize);
-            enterScale = transform.localScale;
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        Debug.Log(collision.transform.parent);
-        Debug.Log(GameManager.Instance.activeWindow.gameObject);
-        if (collision.transform.parent == GameManager.Instance.activeWindow.transform)
-        {
-            //collision.transform.localScale = new Vector2(enterSize.y / col.size.y, enterSize.x / col.size.x);
             transform.localScale = new Vector2((GameManager.Instance.activeWindow.rend.size.x - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.x * enterScale.x, (GameManager.Instance.activeWindow.rend.size.y - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.y * enterScale.y);
         }
     }
-
     public void ResetObject()
     {
         gameObject.SetActive(false);
         enterScale = initScale;
+        enterWindowSize = GameManager.Instance.activeWindow.rend.size;
         transform.localScale = initScale;
         gameObject.SetActive(true);
     }

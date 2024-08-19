@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         GameManager.Instance.player = gameObject;
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 
     void Update()

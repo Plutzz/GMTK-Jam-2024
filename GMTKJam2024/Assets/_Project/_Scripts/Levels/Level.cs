@@ -37,9 +37,9 @@ public class Level : MonoBehaviour
 
     public void StartLevel()
     {
+        gameObject.SetActive(true);
         application.SetActiveLevel(this);
         GameManager.Instance.player.transform.position = playerStartPos;
-        gameObject.SetActive(true);
         Debug.Log(GameManager.Instance.activeWindow);
         Debug.Log(GameManager.Instance.activeWindow.rend);
         if (resetWindow && GameManager.Instance.activeWindow != null && GameManager.Instance.activeWindow.rend != null)
