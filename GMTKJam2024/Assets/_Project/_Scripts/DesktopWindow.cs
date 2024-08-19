@@ -29,31 +29,31 @@ public class DesktopWindow : MonoBehaviour
 
         if (applicationWindow && !dragging && GameManager.Instance.player != null)
         {
-            transform.position = new Vector2(Mathf.Lerp(transform.position.x, GameManager.Instance.player.transform.position.x, lerpSpeed), Mathf.Lerp(transform.position.y, GameManager.Instance.player.transform.position.y, lerpSpeed));
+            transform.position = new Vector2(Mathf.Lerp(transform.position.x, GameManager.Instance.player.transform.position.x, lerpSpeed), Mathf.Lerp(transform.position.y, GameManager.Instance.player.transform.position.y, lerpSpeed * Time.deltaTime));
 
             float _leftBound = transform.position.x - (rend.size.x / 2);
             if(_leftBound < -horizontalBounds)
             {
-                transform.position = new Vector2(Mathf.Lerp(transform.position.x, -horizontalBounds + (rend.size.x / 2), borderLerpSpeed), transform.position.y);
+                transform.position = new Vector2(Mathf.Lerp(transform.position.x, -horizontalBounds + (rend.size.x / 2), borderLerpSpeed * Time.deltaTime), transform.position.y);
                 //transform.position = new Vector2(-horizontalBounds + (rend.size.x / 2), transform.position.y);
             }
             float _rightBound = transform.position.x + (rend.size.x / 2);
             if (_rightBound > horizontalBounds)
             {
-                transform.position = new Vector2(Mathf.Lerp(transform.position.x, horizontalBounds - (rend.size.x / 2), borderLerpSpeed), transform.position.y);
+                transform.position = new Vector2(Mathf.Lerp(transform.position.x, horizontalBounds - (rend.size.x / 2), borderLerpSpeed * Time.deltaTime), transform.position.y);
                 //transform.position = new Vector2(horizontalBounds - (rend.size.x / 2), transform.position.y);
             }
 
             float _topBound = transform.position.y + (rend.size.y / 2);
             if (_topBound > topBound)
             {
-                transform.position = new Vector2(transform.position.x, Mathf.Lerp(transform.position.y, topBound - (rend.size.y / 2), borderLerpSpeed));
+                transform.position = new Vector2(transform.position.x, Mathf.Lerp(transform.position.y, topBound - (rend.size.y / 2), borderLerpSpeed * Time.deltaTime));
                 //transform.position = new Vector2(transform.position.x, topBound - (rend.size.y / 2));
             }
             float _bottomBound = transform.position.y - (rend.size.y / 2);
             if (_bottomBound < bottomBound)
             {
-                transform.position = new Vector2(transform.position.x, Mathf.Lerp(transform.position.y, bottomBound + (rend.size.y / 2), borderLerpSpeed));
+                transform.position = new Vector2(transform.position.x, Mathf.Lerp(transform.position.y, bottomBound + (rend.size.y / 2), borderLerpSpeed * Time.deltaTime));
                 //transform.position = new Vector2(transform.position.x, bottomBound + (rend.size.y / 2));
             }
         }
