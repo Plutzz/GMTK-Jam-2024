@@ -14704,18 +14704,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: KillBlock (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 8111880087186252113, guid: dc3b79748482ad94f9ae4ccac58ad2ee, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8111880087186252113, guid: dc3b79748482ad94f9ae4ccac58ad2ee, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8111880087186252113, guid: dc3b79748482ad94f9ae4ccac58ad2ee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 419852ff6aa13d648b9e5f19baafa446, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14852,18 +14840,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: KillBlock (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 8111880087186252113, guid: dc3b79748482ad94f9ae4ccac58ad2ee, type: 3}
-      propertyPath: m_Size.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8111880087186252113, guid: dc3b79748482ad94f9ae4ccac58ad2ee, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8111880087186252113, guid: dc3b79748482ad94f9ae4ccac58ad2ee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 419852ff6aa13d648b9e5f19baafa446, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14926,18 +14902,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: KillBlock (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 8111880087186252113, guid: dc3b79748482ad94f9ae4ccac58ad2ee, type: 3}
-      propertyPath: m_Size.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8111880087186252113, guid: dc3b79748482ad94f9ae4ccac58ad2ee, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8111880087186252113, guid: dc3b79748482ad94f9ae4ccac58ad2ee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 419852ff6aa13d648b9e5f19baafa446, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15214,18 +15178,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: KillBlock (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8111880087186252113, guid: dc3b79748482ad94f9ae4ccac58ad2ee, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8111880087186252113, guid: dc3b79748482ad94f9ae4ccac58ad2ee, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8111880087186252113, guid: dc3b79748482ad94f9ae4ccac58ad2ee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 419852ff6aa13d648b9e5f19baafa446, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15288,18 +15240,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: KillBlock
       objectReference: {fileID: 0}
-    - target: {fileID: 8111880087186252113, guid: dc3b79748482ad94f9ae4ccac58ad2ee, type: 3}
-      propertyPath: m_Size.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8111880087186252113, guid: dc3b79748482ad94f9ae4ccac58ad2ee, type: 3}
-      propertyPath: m_Size.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8111880087186252113, guid: dc3b79748482ad94f9ae4ccac58ad2ee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 419852ff6aa13d648b9e5f19baafa446, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15894,29 +15834,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3770546377120709967}
     m_Modifications:
-    - target: {fileID: 589238002680366517, guid: 384b85294a8662c4d98f17dfb15c2d80, type: 3}
-      propertyPath: m_TagString
-      value: Safe
-      objectReference: {fileID: 0}
-    - target: {fileID: 3359713174514218634, guid: 384b85294a8662c4d98f17dfb15c2d80, type: 3}
-      propertyPath: offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3359713174514218634, guid: 384b85294a8662c4d98f17dfb15c2d80, type: 3}
-      propertyPath: offset.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3478639181308768926, guid: 384b85294a8662c4d98f17dfb15c2d80, type: 3}
       propertyPath: m_Name
       value: PathwayBlock
-      objectReference: {fileID: 0}
-    - target: {fileID: 3478639181308768926, guid: 384b85294a8662c4d98f17dfb15c2d80, type: 3}
-      propertyPath: m_TagString
-      value: Safe
-      objectReference: {fileID: 0}
-    - target: {fileID: 5429212010861071032, guid: 384b85294a8662c4d98f17dfb15c2d80, type: 3}
-      propertyPath: m_SortingOrder
-      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7042933535619243043, guid: 384b85294a8662c4d98f17dfb15c2d80, type: 3}
       propertyPath: m_LocalPosition.x
