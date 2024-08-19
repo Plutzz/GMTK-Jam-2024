@@ -43,11 +43,13 @@ public class WindowSize : MonoBehaviour, IWindowHandle
         mousePosition = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
         initialRendSize = rend.size;
         dragging = true;
+        window.dragging = true;
         needToReset = false;
     }
     private void OnMouseUp()
     {
         dragging = false;
+        window.dragging = false;
     }
 
     private void OnMouseEnter()

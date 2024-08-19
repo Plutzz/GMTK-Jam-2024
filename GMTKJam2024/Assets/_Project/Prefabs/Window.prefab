@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1246876685845168282
 Transform:
   m_ObjectHideFlags: 0
@@ -463,13 +463,17 @@ MonoBehaviour:
   application: {fileID: 0}
   rend: {fileID: 7037988638140376417}
   borderSize: 0.1
-  initWindowSize: {x: 17, y: 9}
+  dragging: 0
+  initWindowSize: {x: 17.5, y: 8.75}
+  lerpSpeed: 0.01
+  borderLerpSpeed: 0
   minXSize: 1.5
   minYSize: 1
-  maxXSize: 17.7
-  maxYSize: 9
-  horizontalBounds: 8.8
-  verticalBounds: 4.9
+  maxXSize: 17.5
+  maxYSize: 8.85
+  horizontalBounds: 8.75
+  topBound: 4.75
+  bottomBound: -4
 --- !u!1 &4551668686664935148
 GameObject:
   m_ObjectHideFlags: 0

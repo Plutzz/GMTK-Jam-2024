@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ScaleableObject : MonoBehaviour
 {
-    public Vector3 enterWindowSize;
-    public Vector3 enterScale;
-    public Vector3 initScale;
-    [SerializeField] private Vector3 minScale = new Vector3(0.1f, 0.1f, 1f);
+    [HideInInspector] public Vector3 enterWindowSize;
+    [HideInInspector] public Vector3 enterScale;
+    [HideInInspector] public Vector3 initScale;
+    [SerializeField] protected Vector3 minScale = new Vector3(0.1f, 0.1f, 1f);
 
-    private void Start()
+    protected virtual void Start()
     {
         initScale = transform.localScale;
         if(GameManager.Instance.activeWindow != null)
@@ -19,12 +19,12 @@ public class ScaleableObject : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
         transform.localScale = initScale;
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if(transform.localScale.x < minScale.x)
         {
@@ -39,7 +39,7 @@ public class ScaleableObject : MonoBehaviour
             transform.localScale = new Vector2((GameManager.Instance.activeWindow.rend.size.x - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.x * enterScale.x, (GameManager.Instance.activeWindow.rend.size.y - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.y * enterScale.y);
         }
     }
-    public void ResetObject()
+    public virtual void ResetObject()
     {
         gameObject.SetActive(false);
         enterScale = initScale;

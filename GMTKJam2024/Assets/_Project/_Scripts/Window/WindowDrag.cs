@@ -11,12 +11,14 @@ public class WindowDrag : MonoBehaviour, IWindowHandle
     private BoxCollider2D col;
     private SpriteRenderer rend;
     private bool needToReset;
+    private DesktopWindow window;
     [SerializeField] private Texture2D hoverCursor, grabCursor;
 
     private void Start()
     {
         rend = GetComponentInParent<SpriteRenderer>();
         col = GetComponentInParent<BoxCollider2D>();
+        window = GetComponentInParent<DesktopWindow>();
     }
 
     private void Update()
@@ -32,11 +34,13 @@ public class WindowDrag : MonoBehaviour, IWindowHandle
         Cursor.SetCursor(grabCursor, Vector2.one * 16, CursorMode.Auto);
         mousePosition = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.parent.position);
         dragging = true;
+        window.dragging = true;
         needToReset = false;
     }
     private void OnMouseUp()
     {
         dragging = false;
+        window.dragging = false;
         Cursor.SetCursor(hoverCursor, Vector2.one * 16, CursorMode.Auto);
     }
 
