@@ -29,7 +29,7 @@ public class DesktopWindow : MonoBehaviour
 
         if (applicationWindow && !dragging && GameManager.Instance.player != null)
         {
-            transform.position = new Vector2(Mathf.Lerp(transform.position.x, GameManager.Instance.player.transform.position.x, lerpSpeed), Mathf.Lerp(transform.position.y, GameManager.Instance.player.transform.position.y, lerpSpeed * Time.deltaTime));
+            transform.position = new Vector2(Mathf.Lerp(transform.position.x, GameManager.Instance.player.transform.position.x, lerpSpeed * Time.deltaTime), Mathf.Lerp(transform.position.y, GameManager.Instance.player.transform.position.y, lerpSpeed * Time.deltaTime));
 
             float _leftBound = transform.position.x - (rend.size.x / 2);
             if(_leftBound < -horizontalBounds)

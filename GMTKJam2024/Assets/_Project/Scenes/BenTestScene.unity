@@ -4416,6 +4416,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monkey.exe
       objectReference: {fileID: 0}
+    - target: {fileID: 4652465563566432326, guid: d6e2c4844b1b51e4bb40d4923ca9bf27, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652465563566432326, guid: d6e2c4844b1b51e4bb40d4923ca9bf27, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652465563566432326, guid: d6e2c4844b1b51e4bb40d4923ca9bf27, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1669383451
+      objectReference: {fileID: 0}
     - target: {fileID: 4930423054286759923, guid: d6e2c4844b1b51e4bb40d4923ca9bf27, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -5050,8 +5062,8 @@ Canvas:
   m_GameObject: {fileID: 1387606316}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 604899346}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -5061,8 +5073,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingLayerID: -162633605
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1387606320
 RectTransform:
