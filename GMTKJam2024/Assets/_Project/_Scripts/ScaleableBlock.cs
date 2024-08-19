@@ -6,6 +6,7 @@ public class ScaleableBlock : ScaleableObject
 {
     [SerializeField] protected GameObject colliderObject;
     protected SpriteRenderer rend;
+    private bool inverseScale;
 
     private void Awake()
     {
@@ -47,6 +48,11 @@ public class ScaleableBlock : ScaleableObject
         {
             rend.size = new Vector2((GameManager.Instance.activeWindow.rend.size.x - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.x * enterScale.x, (GameManager.Instance.activeWindow.rend.size.y - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.y * enterScale.y);
             colliderObject.transform.localScale = new Vector3((GameManager.Instance.activeWindow.rend.size.x - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.x * enterScale.x, (GameManager.Instance.activeWindow.rend.size.y - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.y * enterScale.y, 1f);
+        }
+        if(inverseScale)
+        {
+            rend.size = new Vector2(1 / rend.size.x, 1 / rend.size.y);
+            colliderObject.transform.localScale = new Vector3(1 / rend.size.x, 1 / rend.size.y, 1f);
         }
     }
 
