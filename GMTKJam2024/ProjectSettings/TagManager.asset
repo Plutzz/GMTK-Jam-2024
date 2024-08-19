@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Scale
   - Kill
+  - Safe
   layers:
   - Default
   - TransparentFX

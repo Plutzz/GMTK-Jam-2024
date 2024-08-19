@@ -176,4 +176,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 8111880087186252113}
-  offset: {x: -0.15, y: 0}
+  offset: {x: -0.15, y: -0.15}
