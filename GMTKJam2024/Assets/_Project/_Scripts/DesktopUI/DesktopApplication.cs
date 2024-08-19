@@ -8,6 +8,7 @@ public class DesktopApplication : MonoBehaviour
     [SerializeField] private string applicationName;
     [SerializeField] private GameObject applicationWindowPrefab;
     [SerializeField] private Level firstLevel;
+    [SerializeField] private GameObject background;
     public Level activeLevel;
     private DesktopWindow window;
     public void StartApplication()
@@ -30,6 +31,8 @@ public class DesktopApplication : MonoBehaviour
 
         GameManager.Instance.player.SetActive(true);
 
+        background.SetActive(true);
+
         Debug.Log(applicationName);
         window = Instantiate(applicationWindowPrefab).GetComponent<DesktopWindow>();
         GameManager.Instance.activeWindow = window;
@@ -42,6 +45,7 @@ public class DesktopApplication : MonoBehaviour
     {
         window.application = null;
         window.CloseWindow();
+        background.SetActive(false);
         activeLevel?.gameObject.SetActive(false);
         activeLevel = null;
         GameManager.Instance.player.SetActive(false);
