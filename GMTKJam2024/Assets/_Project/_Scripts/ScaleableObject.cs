@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScaleableObject : MonoBehaviour
+public class ScaleableObject : MonoBehaviour, IResetable
 {
     [HideInInspector] public Vector3 enterWindowSize;
     [HideInInspector] public Vector3 enterScale;
-    [HideInInspector] public Vector3 initScale;
+    public Vector3 initScale;
     [SerializeField] protected Vector3 minScale = new Vector3(0.1f, 0.1f, 1f);
 
     protected virtual void Start()
