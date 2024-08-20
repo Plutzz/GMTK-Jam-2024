@@ -8916,7 +8916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7147993564888988913, guid: 8f08cad281b47054d85b47181483f848, type: 3}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7147993564888988913, guid: 8f08cad281b47054d85b47181483f848, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9262,7 +9262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7147993564888988913, guid: 8f08cad281b47054d85b47181483f848, type: 3}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7147993564888988913, guid: 8f08cad281b47054d85b47181483f848, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9496,7 +9496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7147993564888988913, guid: 8f08cad281b47054d85b47181483f848, type: 3}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7147993564888988913, guid: 8f08cad281b47054d85b47181483f848, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9984,7 +9984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7147993564888988913, guid: 8f08cad281b47054d85b47181483f848, type: 3}
       propertyPath: m_SortingOrder
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7147993564888988913, guid: 8f08cad281b47054d85b47181483f848, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -11069,7 +11069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7147993564888988913, guid: 8f08cad281b47054d85b47181483f848, type: 3}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7147993564888988913, guid: 8f08cad281b47054d85b47181483f848, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12633,7 +12633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7147993564888988913, guid: 8f08cad281b47054d85b47181483f848, type: 3}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7147993564888988913, guid: 8f08cad281b47054d85b47181483f848, type: 3}
       propertyPath: m_Materials.Array.data[0]
