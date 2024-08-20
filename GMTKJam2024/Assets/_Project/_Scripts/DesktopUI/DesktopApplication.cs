@@ -83,6 +83,11 @@ public class DesktopApplication : BaseApplication
             GameManager.Instance.RemoveMonkeyFromWallpaper();
         }
 
+        if (applicationName == "Biscord.exe" && _completed)
+        {
+            GameManager.Instance.completedDiscordexe = true;
+        }
+
         MusicManager.Instance.PlayAmbience();
 
         window.application = null;

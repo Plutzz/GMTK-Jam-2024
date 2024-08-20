@@ -1,20 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class CoinCollection : MonoBehaviour, IResetable
 {
     [SerializeField] private int coinId;
     [SerializeField] private Animator anim;
-    [SerializeField] private AnimatorController emptyGem;
     
 
     public void ResetObject()
     {
         if (GameManager.Instance.coinCollector.collectedCoins[coinId])
         {
-            anim.runtimeAnimatorController = emptyGem;
+            //anim.runtimeAnimatorController = emptyGem;
         }
         gameObject.SetActive(true);
     }
@@ -29,7 +27,7 @@ public class CoinCollection : MonoBehaviour, IResetable
             AudioManager.Instance.PlaySound(AudioManager.Sounds.pickupCoin1);
             if (!GameManager.Instance.coinCollector.collectedCoins[coinId])
             {
-                anim.runtimeAnimatorController = emptyGem;
+                //anim.runtimeAnimatorController = emptyGem;
                 GameManager.Instance.CollectCoin();
                 GameManager.Instance.coinCollector.CoinActive(coinId);
             }
