@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ScaleableObject : MonoBehaviour, IResetable
 {
-    [HideInInspector] public Vector3 enterWindowSize;
-    [HideInInspector] public Vector3 enterScale;
+    public Vector3 enterWindowSize;
+    public Vector3 enterScale;
     public Vector3 initScale;
     [SerializeField] protected Vector3 minScale = new Vector3(0.1f, 0.1f, 1f);
 
@@ -14,7 +14,7 @@ public class ScaleableObject : MonoBehaviour, IResetable
         initScale = transform.localScale;
         if(GameManager.Instance.activeWindow != null)
         {
-            enterWindowSize = new Vector3(GameManager.Instance.activeWindow.rend.size.x - GameManager.Instance.activeWindow.borderSize, GameManager.Instance.activeWindow.rend.size.y - GameManager.Instance.activeWindow.borderSize);
+            enterWindowSize = new Vector3(GameManager.Instance.activeWindow.rend.size.x, GameManager.Instance.activeWindow.rend.size.y);
             enterScale = transform.localScale;
         }
     }
@@ -26,7 +26,12 @@ public class ScaleableObject : MonoBehaviour, IResetable
 
     protected virtual void Update()
     {
-        if(transform.localScale.x < minScale.x)
+        if (GameManager.Instance.activeWindow != null)
+        {
+
+            transform.localScale = new Vector2((GameManager.Instance.activeWindow.rend.size.x - Mathf.Abs((enterWindowSize.x - GameManager.Instance.activeWindow.rend.size.x) / GameManager.Instance.activeWindow.scaleFactor)) / enterWindowSize.x * enterScale.x, (GameManager.Instance.activeWindow.rend.size.y - Mathf.Abs((enterWindowSize.y - GameManager.Instance.activeWindow.rend.size.y) / GameManager.Instance.activeWindow.scaleFactor)) / enterWindowSize.y * enterScale.y);
+        }
+        if (transform.localScale.x < minScale.x)
         {
             transform.localScale = new Vector3(minScale.x, transform.localScale.y, transform.localScale.z);
         }
@@ -34,11 +39,7 @@ public class ScaleableObject : MonoBehaviour, IResetable
         {
             transform.localScale = new Vector3(transform.localScale.x, minScale.y, transform.localScale.z);
         }
-        if (GameManager.Instance.activeWindow != null)
-        {
-
-            transform.localScale = new Vector2((GameManager.Instance.activeWindow.rend.size.x - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.x * enterScale.x, (GameManager.Instance.activeWindow.rend.size.y - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.y * enterScale.y);
-        }
+       
     }
     public virtual void ResetObject()
     {
