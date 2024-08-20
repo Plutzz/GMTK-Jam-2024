@@ -18,7 +18,7 @@ public class WindowX : MonoBehaviour
     void Update()
     {
         if(applyOffset)
-            transform.localPosition = new Vector2(rend.size.x / 2, rend.size.y / 2) + offset;
+            transform.localPosition = new Vector3((rend.size.x / 2) + offset.x, (rend.size.y / 2) + offset.y, transform.localPosition.z);
     }
 
     private void OnMouseEnter()

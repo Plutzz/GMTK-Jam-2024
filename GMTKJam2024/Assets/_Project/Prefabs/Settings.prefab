@@ -233,6 +233,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7926787959728063190, guid: aac267345e5ea484b8fd56e1735b18d6, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926787959728063190, guid: aac267345e5ea484b8fd56e1735b18d6, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926787959728063190, guid: aac267345e5ea484b8fd56e1735b18d6, type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645151528566630990, guid: aac267345e5ea484b8fd56e1735b18d6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645151528566630990, guid: aac267345e5ea484b8fd56e1735b18d6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 9210125492342871096, guid: aac267345e5ea484b8fd56e1735b18d6, type: 3}
       propertyPath: onlyHide
       value: 1

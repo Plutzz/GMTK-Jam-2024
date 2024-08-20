@@ -2169,12 +2169,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 8645151528566630990}
   - {fileID: 5886068807460063467}
   - {fileID: 7893798857282366679}
   - {fileID: 9045157496428740739}
   - {fileID: 6969721354430843885}
   - {fileID: 4449398375695977197}
-  - {fileID: 8645151528566630990}
   - {fileID: 2778507133524529529}
   - {fileID: 4909322378539014760}
   m_Father: {fileID: 0}
@@ -2845,6 +2845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyOffset: 0
+  onlyHide: 0
   offset: {x: -0.18, y: -0.21}
 --- !u!1 &8589819463645182314
 GameObject:

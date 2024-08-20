@@ -21,19 +21,22 @@ public class WindowSize : MonoBehaviour, IWindowHandle
 
     private void Update()
     {
-        if(rightScaleX && !dragging)
+        if(rightScaleX)
         {
-            transform.position = transform.parent.position + Vector3.right * rend.size.x / 2;
+            //transform.position = transform.parent.position + Vector3.right * rend.size.x / 2;
+            transform.position = new Vector3(transform.parent.position.x + rend.size.x / 2, transform.parent.position.y, transform.localPosition.z);
             col.size = new Vector2(col.size.x, rend.size.y);
         }
-        if(leftScaleX && !dragging)
+        if(leftScaleX)
         {
-            transform.position = transform.parent.position + Vector3.left * rend.size.x / 2;
+            //transform.position = transform.parent.position + Vector3.left * rend.size.x / 2;
+            transform.position = new Vector3(transform.parent.position.x + (-rend.size.x / 2), transform.parent.position.y, transform.localPosition.z);
             col.size = new Vector2(col.size.x, rend.size.y);
         }
-        if(scaleY && !dragging)
+        if(scaleY)
         {
-            transform.position = transform.parent.position + Vector3.down * rend.size.y / 2;
+            //transform.position = transform.parent.position + Vector3.down * rend.size.y / 2;
+            transform.position = new Vector3(transform.parent.position.x, transform.parent.position.y - rend.size.y / 2, transform.localPosition.z);
             col.size = new Vector2(rend.size.x, col.size.y);
         }
     }
