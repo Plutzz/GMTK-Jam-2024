@@ -12,9 +12,23 @@ public class DesktopApplication : BaseApplication
     [SerializeField] private Vector2 initWindowSize;
     public Level activeLevel;
     private DesktopWindow window;
+    [SerializeField] private GameObject monkeyIcons;
+    [SerializeField] private GameObject chromeIcon;
+    [SerializeField] private GameObject discordIcon;
     public override void StartApplication()
     {
-        if(window != null)
+        if (!GameManager.Instance.completedMonkeyexe && applicationName != "Monkey.exe")
+        {
+            ForceMonkey();
+            return;
+        }
+
+        discordIcon?.SetActive(true);
+        chromeIcon?.SetActive(true);
+        monkeyIcons?.SetActive(false);
+
+
+        if (window != null)
         {
             window.CloseWindow();
         }
@@ -44,8 +58,12 @@ public class DesktopApplication : BaseApplication
         
     }
 
-    public void CloseApplication()
+    public void CloseApplication(bool _completed)
     {
+        if(applicationName == "Monkey.exe" && _completed)
+        {
+            GameManager.Instance.completedMonkeyexe = true;
+        }
         window.application = null;
         window.CloseWindow();
         background.SetActive(false);
@@ -62,5 +80,13 @@ public class DesktopApplication : BaseApplication
     public void ResizeWindow(Vector2 _size)
     {
         window.ResizeWindow(_size);
+    }
+
+    private void ForceMonkey()
+    {
+        // Glitch effect
+        discordIcon.SetActive(false);
+        chromeIcon.SetActive(false);
+        monkeyIcons.SetActive(true);
     }
 }

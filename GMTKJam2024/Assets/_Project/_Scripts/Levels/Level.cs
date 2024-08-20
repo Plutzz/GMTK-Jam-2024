@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Tilemaps;
 
 public class Level : MonoBehaviour
@@ -14,6 +15,9 @@ public class Level : MonoBehaviour
     [SerializeField] private Vector3 resetWindowPosition = new Vector3(0, 0.5f, 0);
 
     [SerializeField] private List<IResetable> resetableObjects = new List<IResetable>();
+
+    public UnityEvent actionOnStart;
+    public UnityEvent actionOnComplete;
 
 
     private void Start()
@@ -70,7 +74,7 @@ public class Level : MonoBehaviour
         gameObject.SetActive(false);
         if(lastLevelInApplication)
         {
-            application.CloseApplication();
+            application.CloseApplication(true);
         }
     }
 

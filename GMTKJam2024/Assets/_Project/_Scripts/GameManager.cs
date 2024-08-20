@@ -8,6 +8,15 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector] public GameObject player;
     [HideInInspector] public DesktopWindow activeWindow;
     [HideInInspector] public CoinCollectTracker coinCollector;
+
+    [SerializeField] public bool completedMonkeyexe = false;
+
+    [Header("Dark Mode")]
+    [SerializeField] private Sprite darkModeWallpaper;
+    [SerializeField] private Sprite monkeyMissingWallpaper;
+    [SerializeField] private SpriteRenderer desktopWallPaper;
+
+
     // Monkey Coins
 
     [HideInInspector] public CoinPopup coinPopup;

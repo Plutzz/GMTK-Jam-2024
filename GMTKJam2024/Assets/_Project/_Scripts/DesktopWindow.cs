@@ -63,7 +63,7 @@ public class DesktopWindow : MonoBehaviour
     {
         if(application != null)
         {
-            application.CloseApplication();
+            application.CloseApplication(false);
         }
         GameManager.Instance.SetDefaultCursor();
         Destroy(gameObject);
