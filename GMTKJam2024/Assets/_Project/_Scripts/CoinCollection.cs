@@ -12,9 +12,10 @@ public class CoinCollection : MonoBehaviour, IResetable
     {
         if (GameManager.Instance.coinCollector.collectedCoins[coinId])
         {
-            //anim.runtimeAnimatorController = emptyGem;
+            gameObject.SetActive(false);
         }
         gameObject.SetActive(true);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
