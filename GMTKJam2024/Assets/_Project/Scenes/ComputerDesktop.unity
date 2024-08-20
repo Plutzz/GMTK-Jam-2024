@@ -9311,14 +9311,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4513178011753160967, guid: fc4824c14d578c4439a4811fa6d20fed, type: 3}
-      propertyPath: m_text
-      value: Biscord.exe
-      objectReference: {fileID: 0}
-    - target: {fileID: 5168796103530808666, guid: fc4824c14d578c4439a4811fa6d20fed, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.8
-      objectReference: {fileID: 0}
     - target: {fileID: 5721032632080187669, guid: fc4824c14d578c4439a4811fa6d20fed, type: 3}
       propertyPath: m_Name
       value: Discord.exe
@@ -9331,10 +9323,6 @@ PrefabInstance:
       propertyPath: monkeyIcons
       value: 
       objectReference: {fileID: 614836735}
-    - target: {fileID: 7595784909492212848, guid: fc4824c14d578c4439a4811fa6d20fed, type: 3}
-      propertyPath: applicationName
-      value: Biscord.exe
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

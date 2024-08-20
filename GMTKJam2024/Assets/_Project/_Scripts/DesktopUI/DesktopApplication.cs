@@ -15,11 +15,19 @@ public class DesktopApplication : BaseApplication
     [SerializeField] private GameObject monkeyIcons;
     [SerializeField] private GameObject chromeIcon;
     [SerializeField] private GameObject discordIcon;
+    [SerializeField] private GameObject dialogueForChrome;
     public override void StartApplication()
     {
         if (!GameManager.Instance.completedMonkeyexe && applicationName != "Monkey.exe")
         {
             ForceMonkey();
+            return;
+        }
+
+        if (!GameManager.Instance.completedDiscordexe && applicationName == "Chrome.exe")
+        {
+            // chrome dialogue
+            dialogueForChrome.SetActive(true);
             return;
         }
 
@@ -64,6 +72,7 @@ public class DesktopApplication : BaseApplication
         {
             GameManager.Instance.completedMonkeyexe = true;
         }
+
         window.application = null;
         window.CloseWindow();
         background.SetActive(false);

@@ -10,6 +10,7 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector] public CoinCollectTracker coinCollector;
 
     [SerializeField] public bool completedMonkeyexe = false;
+    [SerializeField] public bool completedDiscordexe = false;
 
     [Header("Dark Mode")]
     [SerializeField] private Sprite darkModeWallpaper;
@@ -59,5 +60,10 @@ public class GameManager : Singleton<GameManager>
     {
         CoinsCollected++;
         coinPopup?.DoPopup();
+    }
+
+    public void ActivateDarkMode()
+    {
+
     }
 }
