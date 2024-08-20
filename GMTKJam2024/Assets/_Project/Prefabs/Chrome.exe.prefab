@@ -4046,6 +4046,7 @@ MonoBehaviour:
   monkeyIcons: {fileID: 0}
   chromeIcon: {fileID: 3682114281745429240}
   discordIcon: {fileID: 0}
+  dialogueForChrome: {fileID: 0}
 --- !u!1 &7785465695645224722
 GameObject:
   m_ObjectHideFlags: 0
@@ -6823,7 +6824,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 62273804012112406, guid: b4fda3549f2212d42a27c7eba151743c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.54
+      value: -3.77
       objectReference: {fileID: 0}
     - target: {fileID: 62273804012112406, guid: b4fda3549f2212d42a27c7eba151743c, type: 3}
       propertyPath: m_LocalPosition.y
