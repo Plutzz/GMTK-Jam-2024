@@ -34,6 +34,7 @@ public class AudioManager : SingletonPersistent<AudioManager>
         pickupCoin4,
         powerupUp,
         random,
+        endSequence
     }
 
     //Use this for sounds that may be repeated very quickly Ex: a bunch of towers shooting

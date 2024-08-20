@@ -16,6 +16,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private Sprite darkModeWallpaper;
     [SerializeField] private Sprite monkeyMissingWallpaper;
     [SerializeField] private SpriteRenderer desktopWallPaper;
+    [HideInInspector] public bool darkModeEnabled;
 
 
     // Monkey Coins
@@ -64,6 +65,6 @@ public class GameManager : Singleton<GameManager>
 
     public void ActivateDarkMode()
     {
-
+        darkModeEnabled = true;
     }
 }

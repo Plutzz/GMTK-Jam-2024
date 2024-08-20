@@ -16,6 +16,11 @@ public class DisplayCoin : MonoBehaviour
     [SerializeField] private Image upgradeButton;
     private bool upgradeReady = true;
 
+    [Header("End Game")]
+    [SerializeField] private GameObject blackScreen;
+    [SerializeField] private GameObject endScreen;
+    [SerializeField] private Animation glitchEffect;
+
     [SerializeField]private List<GameObject> coinList = new List<GameObject>();
     // Start is called before the first frame update
     
@@ -50,7 +55,17 @@ public class DisplayCoin : MonoBehaviour
     {
         if(upgradeReady)
         {
-            //end game
+            AudioManager.Instance.PlayEntireSound(AudioManager.Sounds.endSequence);
+            blackScreen.SetActive(true);
+            glitchEffect.Play();
+            StartCoroutine(Wait());
         }
+    }
+
+    public IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(4.75f);
+        blackScreen.SetActive(false);
+        endScreen.SetActive(true);
     }
 }
