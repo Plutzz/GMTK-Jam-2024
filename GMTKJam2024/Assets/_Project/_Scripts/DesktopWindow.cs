@@ -8,8 +8,8 @@ public class DesktopWindow : MonoBehaviour
     [SerializeField] private bool applicationWindow; // Check if this is an application window to properly set the GameManager.Instance.activeWindow;
     public DesktopApplication application;
     public SpriteRenderer rend;
-    public float borderSize;
     public bool dragging;
+    public float scaleFactor = 2f;
     [SerializeField] Vector2 initWindowSize;
     [SerializeField] private float lerpSpeed = .1f, borderLerpSpeed = 0.1f;
     public float minXSize = 0.25f, minYSize = 0.25f, maxXSize = 17.7f, maxYSize = 5f, horizontalBounds = 9.5f, topBound = 4.9f, bottomBound = -3f;

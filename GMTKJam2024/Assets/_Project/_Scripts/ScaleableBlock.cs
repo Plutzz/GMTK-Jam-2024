@@ -28,7 +28,7 @@ public class ScaleableBlock : ScaleableObject, IResetable
 
         if (GameManager.Instance.activeWindow != null)
         {
-            enterWindowSize = new Vector3(GameManager.Instance.activeWindow.rend.size.x - GameManager.Instance.activeWindow.borderSize, GameManager.Instance.activeWindow.rend.size.y - GameManager.Instance.activeWindow.borderSize);
+            enterWindowSize = new Vector3(GameManager.Instance.activeWindow.rend.size.x, GameManager.Instance.activeWindow.rend.size.y);
             enterScale = new Vector3(rend.size.x, rend.size.y, 1f);
         }
     }
@@ -41,6 +41,23 @@ public class ScaleableBlock : ScaleableObject, IResetable
 
     protected override void Update()
     {
+        if (GameManager.Instance.activeWindow != null)
+        {
+            //Vector2 rendVector = new Vector2((GameManager.Instance.activeWindow.rend.size.x + GameManager.Instance.activeWindow.borderSize) / enterWindowSize.x * enterScale.x, (GameManager.Instance.activeWindow.rend.size.y + GameManager.Instance.activeWindow.borderSize) / enterWindowSize.y * enterScale.y);
+            //Vector3 scaleVector = new Vector3((GameManager.Instance.activeWindow.rend.size.x + GameManager.Instance.activeWindow.borderSize) / enterWindowSize.x * enterScale.x, (GameManager.Instance.activeWindow.rend.size.y + GameManager.Instance.activeWindow.borderSize) / enterWindowSize.y * enterScale.y, 1f);
+            Debug.Log("HELLO" + Mathf.Abs((enterWindowSize.x - GameManager.Instance.activeWindow.rend.size.x) / 2));
+            Vector2 rendVector = new Vector2((GameManager.Instance.activeWindow.rend.size.x - Mathf.Abs((enterWindowSize.x - GameManager.Instance.activeWindow.rend.size.x) / GameManager.Instance.activeWindow.scaleFactor)) / enterWindowSize.x * enterScale.x, (GameManager.Instance.activeWindow.rend.size.y - Mathf.Abs((enterWindowSize.y - GameManager.Instance.activeWindow.rend.size.y) / GameManager.Instance.activeWindow.scaleFactor)) / enterWindowSize.y * enterScale.y);
+            Vector3 scaleVector = new Vector3((GameManager.Instance.activeWindow.rend.size.x - Mathf.Abs((enterWindowSize.x - GameManager.Instance.activeWindow.rend.size.x) / GameManager.Instance.activeWindow.scaleFactor)) / enterWindowSize.x * enterScale.x, (GameManager.Instance.activeWindow.rend.size.y - Mathf.Abs((enterWindowSize.y - GameManager.Instance.activeWindow.rend.size.y) / GameManager.Instance.activeWindow.scaleFactor)) / enterWindowSize.y * enterScale.y, 1f);
+
+            rend.size = rendVector;
+            colliderObject.transform.localScale = scaleVector;
+
+            if (inverseScale)
+            {
+                rend.size = new Vector2(1f / rendVector.x, 1f / rendVector.y);
+                colliderObject.transform.localScale = new Vector3(1 / rendVector.x, 1 / rendVector.y, 1f);
+            }
+        }
         if (rend.size.x < minScale.x)
         {
             Debug.Log("minSize");
@@ -52,18 +69,7 @@ public class ScaleableBlock : ScaleableObject, IResetable
             rend.size = new Vector2(rend.size.x, minScale.y);
             colliderObject.transform.localScale = new Vector3(rend.size.x, rend.size.y, 1f);
         }
-        if (GameManager.Instance.activeWindow != null)
-        {
-            Vector2 rendVector = new Vector2((GameManager.Instance.activeWindow.rend.size.x - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.x * enterScale.x, (GameManager.Instance.activeWindow.rend.size.y - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.y * enterScale.y);
-            Vector3 scaleVector = new Vector3((GameManager.Instance.activeWindow.rend.size.x - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.x * enterScale.x, (GameManager.Instance.activeWindow.rend.size.y - GameManager.Instance.activeWindow.borderSize) / enterWindowSize.y * enterScale.y, 1f);
-            rend.size = rendVector;
-            colliderObject.transform.localScale = scaleVector;
-            if (inverseScale)
-            {
-                rend.size = new Vector2(1f / rendVector.x, 1f / rendVector.y);
-                colliderObject.transform.localScale = new Vector3(1 / rendVector.x, 1 / rendVector.y, 1f);
-            }
-        }
+        
 
         
     }
