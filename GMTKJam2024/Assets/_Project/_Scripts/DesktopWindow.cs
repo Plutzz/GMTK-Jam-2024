@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DesktopWindow : MonoBehaviour
 {
-    [SerializeField] private bool applicationWindow; // Check if this is an application window to properly set the GameManager.Instance.activeWindow;
+    [SerializeField] private bool applicationWindow; // Check if this is an application window to properly set the GameManager.Instance.activeWindow
     public DesktopApplication application;
     public SpriteRenderer rend;
     public bool dragging;
