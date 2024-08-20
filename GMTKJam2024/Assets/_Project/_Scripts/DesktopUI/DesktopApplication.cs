@@ -9,6 +9,7 @@ public class DesktopApplication : MonoBehaviour
     [SerializeField] private GameObject applicationWindowPrefab;
     [SerializeField] private Level firstLevel;
     [SerializeField] private GameObject background;
+    [SerializeField] private Vector2 initWindowSize;
     public Level activeLevel;
     private DesktopWindow window;
     public void StartApplication()
@@ -37,8 +38,10 @@ public class DesktopApplication : MonoBehaviour
         window = Instantiate(applicationWindowPrefab).GetComponent<DesktopWindow>();
         GameManager.Instance.activeWindow = window;
         window.application = this;
+        ResizeWindow(initWindowSize);
         AudioManager.Instance.PlaySound(AudioManager.Sounds.blip2);
         firstLevel.StartLevel();
+        
     }
 
     public void CloseApplication()
@@ -54,5 +57,10 @@ public class DesktopApplication : MonoBehaviour
     public void SetActiveLevel(Level _level)
     {
         activeLevel = _level;
+    }
+
+    public void ResizeWindow(Vector2 _size)
+    {
+        window.ResizeWindow(_size);
     }
 }

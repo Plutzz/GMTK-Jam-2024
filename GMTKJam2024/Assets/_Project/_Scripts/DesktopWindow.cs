@@ -71,6 +71,7 @@ public class DesktopWindow : MonoBehaviour
 
     public void ResizeWindow(Vector2 _size)
     {
+        initWindowSize = _size;
         rend.size = _size;
     }
 
