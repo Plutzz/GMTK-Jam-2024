@@ -150,7 +150,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 16
+  m_SortingOrder: 17
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -264,5 +264,6 @@ MonoBehaviour:
   enterScale: {x: 0, y: 0, z: 0}
   initScale: {x: 0, y: 0, z: 0}
   minScale: {x: 0.1, y: 0.1, z: 1}
+  maxScale: {x: 20, y: 20, z: 1}
   colliderObject: {fileID: 589238002680366517}
   inverseScale: 0
