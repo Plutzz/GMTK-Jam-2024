@@ -12,7 +12,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _TILETYPE_STANDARDTILE
+  - _TILETYPE_CREEPYTILE
   - _USENORMALS
   m_InvalidKeywords:
   - _CENTERED
@@ -81,7 +81,7 @@ Material:
     - _Float: 1.5
     - _NoiseAmount: 2.59
     - _TILED: 0
-    - _TILETYPE: 0
+    - _TILETYPE: 2
     - _TextureScale: 20.57
     - _USENOISE: 0
     - _USENORMAL: 1
