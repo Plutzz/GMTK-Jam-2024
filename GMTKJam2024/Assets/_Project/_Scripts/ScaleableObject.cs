@@ -7,7 +7,7 @@ public class ScaleableObject : MonoBehaviour, IResetable
     public Vector3 enterWindowSize;
     public Vector3 enterScale;
     public Vector3 initScale;
-    [SerializeField] protected Vector3 minScale = new Vector3(0.1f, 0.1f, 1f);
+    [SerializeField] protected Vector3 minScale = new Vector3(0.1f, 0.1f, 1f), maxScale = new Vector3(20f, 20f, 1f);
 
     protected virtual void Start()
     {
@@ -39,7 +39,16 @@ public class ScaleableObject : MonoBehaviour, IResetable
         {
             transform.localScale = new Vector3(transform.localScale.x, minScale.y, transform.localScale.z);
         }
-       
+        if (transform.localScale.x > maxScale.x)
+        {
+            transform.localScale = new Vector3(maxScale.x, transform.localScale.y, transform.localScale.z);
+        }
+        if (transform.localScale.y > maxScale.y)
+        {
+            transform.localScale = new Vector3(transform.localScale.x, maxScale.y, transform.localScale.z);
+        }
+
+
     }
     public virtual void ResetObject()
     {

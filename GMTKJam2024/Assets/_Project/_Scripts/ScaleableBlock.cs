@@ -68,9 +68,20 @@ public class ScaleableBlock : ScaleableObject, IResetable
             rend.size = new Vector2(rend.size.x, minScale.y);
             colliderObject.transform.localScale = new Vector3(rend.size.x, rend.size.y, 1f);
         }
-        
+        if (rend.size.x > maxScale.x)
+        {
+            Debug.Log("minSize");
+            rend.size = new Vector2(maxScale.x, rend.size.y);
+            colliderObject.transform.localScale = new Vector3(rend.size.x, rend.size.y, 1f);
+        }
+        if (rend.size.y > maxScale.y)
+        {
+            rend.size = new Vector2(rend.size.x, maxScale.y);
+            colliderObject.transform.localScale = new Vector3(rend.size.x, rend.size.y, 1f);
+        }
 
-        
+
+
     }
 
     public override void ResetObject()
