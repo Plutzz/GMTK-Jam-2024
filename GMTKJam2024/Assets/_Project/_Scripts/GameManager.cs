@@ -19,6 +19,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private SpriteRenderer desktopWallPaper;
     [SerializeField] private Light2D globalLight;
     [SerializeField] private GameObject playerLight;
+    [SerializeField] private GameObject darkModeMusic;
     [HideInInspector] public bool darkModeEnabled;
 
 
@@ -77,5 +78,7 @@ public class GameManager : Singleton<GameManager>
         desktopWallPaper.sprite = darkModeWallpaper;
         playerLight.SetActive(true);
         globalLight.intensity = 0f;
+        AudioManager.Instance.PlaySound(AudioManager.Sounds.darkMode);
+        MusicManager.Instance.PlaySong(darkModeMusic);
     }
 }

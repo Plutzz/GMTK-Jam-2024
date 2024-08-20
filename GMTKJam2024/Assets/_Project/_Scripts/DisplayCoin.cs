@@ -11,10 +11,11 @@ public class DisplayCoin : MonoBehaviour
     [SerializeField] private Sprite collected;
     [SerializeField] private Sprite notCollected;
     [SerializeField] private TextMeshPro gemText;
+    [SerializeField] private GameObject music;
 
     [SerializeField] private Sprite upgradeButtonReady;
     [SerializeField] private Image upgradeButton;
-    private bool upgradeReady = true;
+    private bool upgradeReady = false;
 
     [Header("End Game")]
     [SerializeField] private GameObject blackScreen;
@@ -26,6 +27,13 @@ public class DisplayCoin : MonoBehaviour
     
     private void OnEnable()
     {
+        if(GameManager.Instance.activeWindow != null)
+        {
+            return;
+        }
+
+        MusicManager.Instance.PlaySong(music);
+
         int numCoinsCollected = 0;
 
         for(int i = startCoinId; i < coinAmount+startCoinId; i++)
@@ -43,11 +51,16 @@ public class DisplayCoin : MonoBehaviour
 
         gemText.text = numCoinsCollected + "";
 
-        if(numCoinsCollected == coinAmount)
+        if(numCoinsCollected >= coinAmount)
         {
             upgradeButton.sprite = upgradeButtonReady;
             upgradeReady = true;
         }
+    }
+
+    public void OnDisable()
+    {
+        MusicManager.Instance.PlayAmbience();
     }
 
 
