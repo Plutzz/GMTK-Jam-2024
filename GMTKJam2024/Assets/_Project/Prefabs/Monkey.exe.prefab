@@ -4511,7 +4511,7 @@ MonoBehaviour:
   - {x: 6.5, y: -0.5, z: 0}
   m_ShapePathHash: 269291381
   m_Mesh: {fileID: 0}
-  m_InstanceId: -590352
+  m_InstanceId: -634010
   m_LocalBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 6.5, y: 0.5, z: 0}
@@ -7500,7 +7500,7 @@ MonoBehaviour:
   - {x: 0.5, y: -3.5, z: 0}
   m_ShapePathHash: 798356757
   m_Mesh: {fileID: 0}
-  m_InstanceId: -590364
+  m_InstanceId: -634022
   m_LocalBounds:
     m_Center: {x: 0, y: -0.5, z: 0}
     m_Extent: {x: 0.5, y: 3, z: 0}
@@ -11943,7 +11943,7 @@ MonoBehaviour:
   - {x: 6.5, y: -0.5, z: 0}
   m_ShapePathHash: 269291381
   m_Mesh: {fileID: 0}
-  m_InstanceId: -590358
+  m_InstanceId: -634016
   m_LocalBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 6.5, y: 0.5, z: 0}
@@ -12005,7 +12005,7 @@ MonoBehaviour:
   - {x: 0.5, y: -3.5, z: 0}
   m_ShapePathHash: 798356757
   m_Mesh: {fileID: 0}
-  m_InstanceId: -590370
+  m_InstanceId: -634028
   m_LocalBounds:
     m_Center: {x: 0, y: -0.5, z: 0}
     m_Extent: {x: 0.5, y: 3, z: 0}
@@ -15924,7 +15924,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2906189769149450564, guid: 384b85294a8662c4d98f17dfb15c2d80, type: 3}
       propertyPath: m_SortingOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3478639181308768926, guid: 384b85294a8662c4d98f17dfb15c2d80, type: 3}
       propertyPath: m_Name

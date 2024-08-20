@@ -3688,6 +3688,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ApplicationIcon
       objectReference: {fileID: 0}
+    - target: {fileID: 3777298436371299220, guid: b4fda3549f2212d42a27c7eba151743c, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3777298436371299220, guid: b4fda3549f2212d42a27c7eba151743c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3777298436371299220, guid: b4fda3549f2212d42a27c7eba151743c, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1669383451
+      objectReference: {fileID: 0}
     - target: {fileID: 5998022419154769166, guid: b4fda3549f2212d42a27c7eba151743c, type: 3}
       propertyPath: m_Sprite
       value: 
