@@ -2447,7 +2447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8671179653205656818
 Transform:
   m_ObjectHideFlags: 0
@@ -7031,65 +7031,7 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 3328416567046215088}
-    m_ColliderPaths:
-    - - X: 0
-        Y: -10000000
-      - X: 70000000
-        Y: -10000000
-      - X: 70000000
-        Y: 40000000
-      - X: -60000000
-        Y: 40000000
-      - X: -60000000
-        Y: 20000000
-      - X: -70000000
-        Y: 20000000
-      - X: -70000000
-        Y: -10000000
-      - X: -60000000
-        Y: -10000000
-      - X: -60000000
-        Y: -40000000
-      - X: 0
-        Y: -40000000
-    - - X: -50000000
-        Y: -30000000
-      - X: -50000000
-        Y: -10000000
-      - X: -30000000
-        Y: -10000000
-      - X: -30000000
-        Y: 0
-      - X: -60000000
-        Y: 0
-      - X: -60000000
-        Y: 10000000
-      - X: -50000000
-        Y: 10000000
-      - X: -50000000
-        Y: 30000000
-      - X: 60000000
-        Y: 30000000
-      - X: 60000000
-        Y: 0
-      - X: -20000000
-        Y: 0
-      - X: -20000000
-        Y: -10000000
-      - X: -10000000
-        Y: -10000000
-      - X: -10000000
-        Y: -30000000
-    - - X: 50000000
-        Y: 20000000
-      - X: -40000000
-        Y: 20000000
-      - X: -40000000
-        Y: 10000000
-      - X: 50000000
-        Y: 10000000
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: -0.000029300001, y: -4}
@@ -8825,6 +8767,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2d2e593f13746340b799aa3eefa6a30, type: 3}
+--- !u!1 &4677076928988376390 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5785259776140376436, guid: b2d2e593f13746340b799aa3eefa6a30, type: 3}
+  m_PrefabInstance: {fileID: 1198256235883074610}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8586248883611341852 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7460622267287502894, guid: b2d2e593f13746340b799aa3eefa6a30, type: 3}
@@ -13141,6 +13088,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key
       objectReference: {fileID: 0}
+    - target: {fileID: 2421442630966448787, guid: 3f07eaa37c17edb40888142cf0b96aa5, type: 3}
+      propertyPath: doors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2421442630966448787, guid: 3f07eaa37c17edb40888142cf0b96aa5, type: 3}
+      propertyPath: doors.Array.data[0]
+      value: 
+      objectReference: {fileID: 4677076928988376390}
     - target: {fileID: 7291241394628240490, guid: 3f07eaa37c17edb40888142cf0b96aa5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.5
