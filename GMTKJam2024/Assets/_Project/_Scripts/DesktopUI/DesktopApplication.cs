@@ -18,6 +18,7 @@ public class DesktopApplication : BaseApplication
     [SerializeField] private GameObject settingsIcon;
     [SerializeField] private GameObject folderIcon;
     [SerializeField] private GameObject dialogueForChrome;
+    [SerializeField] private GameObject music;
     public override void StartApplication()
     {
         if (!GameManager.Instance.completedMonkeyexe && applicationName != "Monkey.exe")
@@ -39,6 +40,10 @@ public class DesktopApplication : BaseApplication
         folderIcon?.SetActive(true);
         monkeyIcons?.SetActive(false);
 
+        if(music != null)
+        {
+            MusicManager.Instance.PlaySong(music);
+        }
 
         if (window != null)
         {
@@ -75,7 +80,10 @@ public class DesktopApplication : BaseApplication
         if(applicationName == "Monkey.exe" && _completed)
         {
             GameManager.Instance.completedMonkeyexe = true;
+            GameManager.Instance.RemoveMonkeyFromWallpaper();
         }
+
+        MusicManager.Instance.PlayAmbience();
 
         window.application = null;
         window.CloseWindow();

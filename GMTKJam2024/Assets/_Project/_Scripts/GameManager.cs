@@ -63,8 +63,14 @@ public class GameManager : Singleton<GameManager>
         coinPopup?.DoPopup();
     }
 
+    public void RemoveMonkeyFromWallpaper()
+    {
+        desktopWallPaper.sprite = monkeyMissingWallpaper;
+    }
+
     public void ActivateDarkMode()
     {
         darkModeEnabled = true;
+        desktopWallPaper.sprite = darkModeWallpaper;
     }
 }
