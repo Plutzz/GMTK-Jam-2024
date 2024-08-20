@@ -1314,6 +1314,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinId: 11
+  anim: {fileID: 2748859674103188336}
+  emptyGem: {fileID: 9100000, guid: 0d6d1f6476a11314bbf6cc4115d3dd2d, type: 2}
 --- !u!1 &614193821583872792
 GameObject:
   m_ObjectHideFlags: 0
@@ -2017,7 +2019,7 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   m_ShapePathHash: 2073425173
   m_Mesh: {fileID: 0}
-  m_InstanceId: -44622
+  m_InstanceId: -183006
   m_LocalBounds:
     m_Center: {x: -0.5, y: 0, z: 0}
     m_Extent: {x: 1, y: 0.5, z: 0}
@@ -2326,7 +2328,7 @@ MonoBehaviour:
   - {x: 1.5, y: -0.5, z: 0}
   m_ShapePathHash: -1877609195
   m_Mesh: {fileID: 0}
-  m_InstanceId: -45536
+  m_InstanceId: -183018
   m_LocalBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 1.5, y: 0.5, z: 0}
@@ -2659,7 +2661,7 @@ MonoBehaviour:
   - {x: 0.5, y: -2.5, z: 0}
   m_ShapePathHash: -174721771
   m_Mesh: {fileID: 0}
-  m_InstanceId: -17872
+  m_InstanceId: -182952
   m_LocalBounds:
     m_Center: {x: 0, y: 0.5, z: 0}
     m_Extent: {x: 0.5, y: 3, z: 0}
@@ -2783,7 +2785,7 @@ MonoBehaviour:
   - {x: 0.5, y: -1.5, z: 0}
   m_ShapePathHash: 1268118805
   m_Mesh: {fileID: 0}
-  m_InstanceId: -41248
+  m_InstanceId: -182964
   m_LocalBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 1.5, z: 0}
@@ -2969,7 +2971,7 @@ MonoBehaviour:
   - {x: 0.5, y: -2.5, z: 0}
   m_ShapePathHash: -174721771
   m_Mesh: {fileID: 0}
-  m_InstanceId: -17876
+  m_InstanceId: -182946
   m_LocalBounds:
     m_Center: {x: 0, y: 0.5, z: 0}
     m_Extent: {x: 0.5, y: 3, z: 0}
@@ -3105,7 +3107,7 @@ Transform:
   m_GameObject: {fileID: 2339248364223516654}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -0.5000001, z: 0}
+  m_LocalPosition: {x: -6.5, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -3160,6 +3162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinId: 12
+  anim: {fileID: 4052257770690118870}
+  emptyGem: {fileID: 9100000, guid: 0d6d1f6476a11314bbf6cc4115d3dd2d, type: 2}
 --- !u!1 &2361101183847019059
 GameObject:
   m_ObjectHideFlags: 0
@@ -6661,7 +6665,7 @@ MonoBehaviour:
   - {x: 1.5, y: -0.5, z: 0}
   m_ShapePathHash: -1877609195
   m_Mesh: {fileID: 0}
-  m_InstanceId: -46210
+  m_InstanceId: -183024
   m_LocalBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 1.5, y: 0.5, z: 0}
@@ -7390,7 +7394,7 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   m_ShapePathHash: 160822549
   m_Mesh: {fileID: 0}
-  m_InstanceId: -17864
+  m_InstanceId: -182982
   m_LocalBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 0.5, z: 0}
@@ -7581,6 +7585,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinId: 8
+  anim: {fileID: 4732583848744301027}
+  emptyGem: {fileID: 9100000, guid: 0d6d1f6476a11314bbf6cc4115d3dd2d, type: 2}
 --- !u!1 &3539247970121670788
 GameObject:
   m_ObjectHideFlags: 0
@@ -7925,7 +7931,7 @@ MonoBehaviour:
   - {x: 0.5, y: -1.5, z: 0}
   m_ShapePathHash: 1268118805
   m_Mesh: {fileID: 0}
-  m_InstanceId: -42976
+  m_InstanceId: -182970
   m_LocalBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 1.5, z: 0}
@@ -9481,7 +9487,7 @@ Transform:
   m_GameObject: {fileID: 5224345569750615349}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.22, y: 0.22, z: 0.22}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -9642,6 +9648,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinId: 9
+  anim: {fileID: 1400370586908928747}
+  emptyGem: {fileID: 9100000, guid: 0d6d1f6476a11314bbf6cc4115d3dd2d, type: 2}
 --- !u!1 &5448817210186117543
 GameObject:
   m_ObjectHideFlags: 0
@@ -9994,7 +10002,10 @@ MonoBehaviour:
   monkeyIcons: {fileID: 0}
   chromeIcon: {fileID: 0}
   discordIcon: {fileID: 7530626721672084229}
+  settingsIcon: {fileID: 0}
+  folderIcon: {fileID: 0}
   dialogueForChrome: {fileID: 0}
+  music: {fileID: 0}
 --- !u!1 &5739544904528702214
 GameObject:
   m_ObjectHideFlags: 0
@@ -10366,7 +10377,7 @@ MonoBehaviour:
   - {x: 0.5, y: -1.5, z: 0}
   m_ShapePathHash: 1268118805
   m_Mesh: {fileID: 0}
-  m_InstanceId: -17868
+  m_InstanceId: -182958
   m_LocalBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 1.5, z: 0}
@@ -10779,7 +10790,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 6, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6049535192878769408}
@@ -10832,7 +10843,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -10915,7 +10926,7 @@ MonoBehaviour:
   - {x: 0.5, y: -1.5, z: 0}
   m_ShapePathHash: 1268118805
   m_Mesh: {fileID: 0}
-  m_InstanceId: -41464
+  m_InstanceId: -182976
   m_LocalBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 1.5, z: 0}
@@ -11219,7 +11230,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 6, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2154942889652589062}
@@ -11272,7 +11283,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -11355,7 +11366,7 @@ MonoBehaviour:
   - {x: 6.5, y: -0.5, z: 0}
   m_ShapePathHash: 529921301
   m_Mesh: {fileID: 0}
-  m_InstanceId: -17888
+  m_InstanceId: -182928
   m_LocalBounds:
     m_Center: {x: -1.5, y: 0, z: 0}
     m_Extent: {x: 8, y: 0.5, z: 0}
@@ -11777,7 +11788,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 3, y: 2}
+  m_Size: {x: 1, y: 6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -12091,7 +12102,7 @@ MonoBehaviour:
   - {x: 6.5, y: -0.5, z: 0}
   m_ShapePathHash: 529921301
   m_Mesh: {fileID: 0}
-  m_InstanceId: -38976
+  m_InstanceId: -182934
   m_LocalBounds:
     m_Center: {x: -1.5, y: 0, z: 0}
     m_Extent: {x: 8, y: 0.5, z: 0}
@@ -12277,7 +12288,7 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   m_ShapePathHash: 160822549
   m_Mesh: {fileID: 0}
-  m_InstanceId: -47068
+  m_InstanceId: -182988
   m_LocalBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 0.5, z: 0}
@@ -12339,7 +12350,7 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   m_ShapePathHash: 2073425173
   m_Mesh: {fileID: 0}
-  m_InstanceId: -42378
+  m_InstanceId: -183000
   m_LocalBounds:
     m_Center: {x: -0.5, y: 0, z: 0}
     m_Extent: {x: 1, y: 0.5, z: 0}
@@ -13426,7 +13437,7 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   m_ShapePathHash: 160822549
   m_Mesh: {fileID: 0}
-  m_InstanceId: -47376
+  m_InstanceId: -182994
   m_LocalBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 0.5, z: 0}
@@ -13488,7 +13499,7 @@ MonoBehaviour:
   - {x: 2.5, y: -0.5, z: 0}
   m_ShapePathHash: -862587627
   m_Mesh: {fileID: 0}
-  m_InstanceId: -17880
+  m_InstanceId: -182940
   m_LocalBounds:
     m_Center: {x: -0.5, y: 0, z: 0}
     m_Extent: {x: 3, y: 0.5, z: 0}
@@ -13636,6 +13647,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinId: 10
+  anim: {fileID: 1518120438389874360}
+  emptyGem: {fileID: 9100000, guid: 0d6d1f6476a11314bbf6cc4115d3dd2d, type: 2}
 --- !u!1 &9197143189554543747
 GameObject:
   m_ObjectHideFlags: 0
@@ -13694,7 +13707,7 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   m_ShapePathHash: 2073425173
   m_Mesh: {fileID: 0}
-  m_InstanceId: -44976
+  m_InstanceId: -183012
   m_LocalBounds:
     m_Center: {x: -0.5, y: 0, z: 0}
     m_Extent: {x: 1, y: 0.5, z: 0}
@@ -13873,7 +13886,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: ffab7b55a57df554494c72cb2908f90d, type: 3}
     - target: {fileID: 3609063392782176198, guid: acb9a154a66346e41a52b189aef85ccd, type: 3}
       propertyPath: m_InstanceId
-      value: -33636
+      value: -183056
       objectReference: {fileID: 0}
     - target: {fileID: 5548178686373107098, guid: acb9a154a66346e41a52b189aef85ccd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14575,7 +14588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6169639586032879707, guid: b2d2e593f13746340b799aa3eefa6a30, type: 3}
       propertyPath: m_InstanceId
-      value: -17782
+      value: -182864
       objectReference: {fileID: 0}
     - target: {fileID: 7460622267287502894, guid: b2d2e593f13746340b799aa3eefa6a30, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14806,7 +14819,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: ffab7b55a57df554494c72cb2908f90d, type: 3}
     - target: {fileID: 3609063392782176198, guid: acb9a154a66346e41a52b189aef85ccd, type: 3}
       propertyPath: m_InstanceId
-      value: -35614
+      value: -183072
       objectReference: {fileID: 0}
     - target: {fileID: 5548178686373107098, guid: acb9a154a66346e41a52b189aef85ccd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14900,7 +14913,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: ffab7b55a57df554494c72cb2908f90d, type: 3}
     - target: {fileID: 3609063392782176198, guid: acb9a154a66346e41a52b189aef85ccd, type: 3}
       propertyPath: m_InstanceId
-      value: -27526
+      value: -183040
       objectReference: {fileID: 0}
     - target: {fileID: 5548178686373107098, guid: acb9a154a66346e41a52b189aef85ccd, type: 3}
       propertyPath: m_LocalPosition.x
