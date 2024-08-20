@@ -296,10 +296,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1586493232093815550, guid: ce5a9531822ca21459a76769aab7bb96, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2168717460929278816, guid: ce5a9531822ca21459a76769aab7bb96, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.5
@@ -343,30 +339,6 @@ PrefabInstance:
     - target: {fileID: 2515607992946129251, guid: ce5a9531822ca21459a76769aab7bb96, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576622336760213430, guid: ce5a9531822ca21459a76769aab7bb96, type: 3}
-      propertyPath: m_MaskInteraction
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6035683065899145893, guid: ce5a9531822ca21459a76769aab7bb96, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 888644680, guid: 25d166bc9dc8b984aa0a1a6cdf814562, type: 3}
-    - target: {fileID: 6035683065899145893, guid: ce5a9531822ca21459a76769aab7bb96, type: 3}
-      propertyPath: m_MaskInteraction
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6340854891985008329, guid: ce5a9531822ca21459a76769aab7bb96, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6340854891985008329, guid: ce5a9531822ca21459a76769aab7bb96, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7348020817933332691, guid: ce5a9531822ca21459a76769aab7bb96, type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 17.42
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6292,7 +6264,7 @@ GameObject:
   - component: {fileID: 1575820842}
   - component: {fileID: 1575820841}
   m_Layer: 0
-  m_Name: taskbar_SMALLER_0
+  m_Name: Taskbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6344,7 +6316,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 18, y: 0.6}
+  m_Size: {x: 18, y: 0.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6359,7 +6331,7 @@ Transform:
   m_GameObject: {fileID: 1575820840}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00000047683716, y: -4.667, z: 0}
+  m_LocalPosition: {x: -0.00000047683716, y: -4.598, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8715,11 +8687,11 @@ PrefabInstance:
       objectReference: {fileID: 2800000, guid: af772ac0207786a42ada6db6360561a3, type: 3}
     - target: {fileID: 399221716538268729, guid: 56ceea871983d2a4eb14bf6fbc67bec6, type: 3}
       propertyPath: completedMonkeyexe
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 399221716538268729, guid: 56ceea871983d2a4eb14bf6fbc67bec6, type: 3}
       propertyPath: completedDiscordexe
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4775466819986190979, guid: 56ceea871983d2a4eb14bf6fbc67bec6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9629,6 +9601,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 604899347}
   - {fileID: 1028415508}
+  - {fileID: 1575820842}
   - {fileID: 89336021}
   - {fileID: 1387606320}
   - {fileID: 131198246}
@@ -9639,4 +9612,3 @@ SceneRoots:
   - {fileID: 8492271096617322679}
   - {fileID: 1362707073332394184}
   - {fileID: 2131242060}
-  - {fileID: 1575820842}
