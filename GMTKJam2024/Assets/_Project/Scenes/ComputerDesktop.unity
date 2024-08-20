@@ -17390,6 +17390,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -124699981
       objectReference: {fileID: 0}
+    - target: {fileID: 5090501707760671301, guid: 9afc3008cee58af40944ae907ef24eec, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 5190343178389873302, guid: 9afc3008cee58af40944ae907ef24eec, type: 3}
       propertyPath: m_Name
       value: TextBox
@@ -17428,7 +17432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7799771407624716520, guid: 9afc3008cee58af40944ae907ef24eec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.78
+      value: 3.4
       objectReference: {fileID: 0}
     - target: {fileID: 7799771407624716520, guid: 9afc3008cee58af40944ae907ef24eec, type: 3}
       propertyPath: m_LocalPosition.z
