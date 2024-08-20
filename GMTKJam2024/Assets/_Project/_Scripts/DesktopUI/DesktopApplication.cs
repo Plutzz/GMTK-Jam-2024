@@ -15,6 +15,8 @@ public class DesktopApplication : BaseApplication
     [SerializeField] private GameObject monkeyIcons;
     [SerializeField] private GameObject chromeIcon;
     [SerializeField] private GameObject discordIcon;
+    [SerializeField] private GameObject settingsIcon;
+    [SerializeField] private GameObject folderIcon;
     [SerializeField] private GameObject dialogueForChrome;
     public override void StartApplication()
     {
@@ -33,6 +35,8 @@ public class DesktopApplication : BaseApplication
 
         discordIcon?.SetActive(true);
         chromeIcon?.SetActive(true);
+        settingsIcon?.SetActive(true);
+        folderIcon?.SetActive(true);
         monkeyIcons?.SetActive(false);
 
 
@@ -96,6 +100,8 @@ public class DesktopApplication : BaseApplication
         // Glitch effect
         discordIcon.SetActive(false);
         chromeIcon.SetActive(false);
+        settingsIcon.SetActive(false);
+        folderIcon.SetActive(false);
         monkeyIcons.SetActive(true);
     }
 }
