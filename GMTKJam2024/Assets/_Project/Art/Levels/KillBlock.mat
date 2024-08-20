@@ -45,8 +45,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _PanningSpeed: 1
-    - _TextureScale: 2.27
+    - _PanningSpeed: 0.22
+    - _TextureScale: 0.44
     m_Colors: []
   m_BuildTextureStacks: []
 --- !u!114 &2998277214181658861
