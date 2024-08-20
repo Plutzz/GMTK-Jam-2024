@@ -22,7 +22,7 @@ public class CoinPopup : MonoBehaviour
 
     public void DoPopup()
     {
-        coinText.text = GameManager.Instance.CoinsCollected + "/" + GameManager.Instance.TotalCoins;
+        coinText.text = GameManager.Instance.CoinsCollected + "";
         transform.DOLocalMove(popupPosition, popupTime).SetEase(easeIn);
         StartCoroutine(Wait());
     }

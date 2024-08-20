@@ -82,6 +82,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinId: 0
+  anim: {fileID: 7792812645756234553}
+  emptyGem: {fileID: 9100000, guid: 0d6d1f6476a11314bbf6cc4115d3dd2d, type: 2}
 --- !u!1 &6549887417950649841
 GameObject:
   m_ObjectHideFlags: 0
