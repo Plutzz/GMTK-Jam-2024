@@ -55,6 +55,8 @@ public class Level : MonoBehaviour
 
     public void StartLevel()
     {
+        actionOnStart.Invoke();
+
         gameObject.SetActive(true);
         application.SetActiveLevel(this);
         
@@ -70,6 +72,8 @@ public class Level : MonoBehaviour
 
     public void EndLevel()
     {
+        actionOnComplete.Invoke();
+
         AudioManager.Instance.PlaySound(AudioManager.Sounds.pickupCoin2);
         gameObject.SetActive(false);
         if(lastLevelInApplication)
