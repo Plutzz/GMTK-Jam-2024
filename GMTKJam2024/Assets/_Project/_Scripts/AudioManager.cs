@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class AudioManager : SingletonPersistent<AudioManager>
 {
@@ -13,6 +15,11 @@ public class AudioManager : SingletonPersistent<AudioManager>
 
     [SerializeField]
     private int maxAudioSources = 10;
+
+
+    [SerializeField] private AudioMixer mixer;
+    [SerializeField] private AudioMixerGroup musicGroup, sfxGroup;
+    [SerializeField] private Slider masterSlider, musicSlider, sfxSlider;
 
     public enum Sounds
     {
@@ -57,6 +64,7 @@ public class AudioManager : SingletonPersistent<AudioManager>
         }
         audioSource.clip = GetAudioClip(_sound).audioClip;
         audioSource.volume = GetAudioClip(_sound).volume;
+        audioSource.outputAudioMixerGroup = sfxGroup;
         audioSource.PlayOneShot(audioSource.clip);
     }
 
@@ -69,6 +77,7 @@ public class AudioManager : SingletonPersistent<AudioManager>
         AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
         audioSource.clip = GetAudioClip(_sound).audioClip;
         audioSource.volume = GetAudioClip(_sound).volume;
+        audioSource.outputAudioMixerGroup = sfxGroup;
         audioSource.priority = 50;
         audioSource.PlayOneShot(audioSource.clip);
         Destroy(soundGameObject, audioSource.clip.length);
@@ -97,5 +106,25 @@ public class AudioManager : SingletonPersistent<AudioManager>
         [SerializeField, Range(0f, 1f)]
         public float volume = 1;
     }
+
+
+    public void SetMasterVolume()
+    {
+        float _volume = masterSlider.value;
+        mixer.SetFloat("masterVol", Mathf.Log10(_volume) * 20f);
+    }
+
+    public void SetMusicVolume()
+    {
+        float _volume = musicSlider.value;
+        mixer.SetFloat("musicVol", Mathf.Log10(_volume) * 20);
+    }
+
+    public void SetSfxVolume()
+    {
+        float _volume = sfxSlider.value;
+        mixer.SetFloat("sfxVol", Mathf.Log10(_volume) * 20);
+    }
+
 
 }

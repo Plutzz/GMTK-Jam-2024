@@ -6,6 +6,7 @@ public class WindowX : MonoBehaviour
 {
     private SpriteRenderer rend;
     [SerializeField] private bool applyOffset = true;
+    [SerializeField] private bool onlyHide;
     [SerializeField] private Vector2 offset;
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,13 @@ public class WindowX : MonoBehaviour
 
     private void OnMouseDown()
     {
-        GetComponentInParent<DesktopWindow>().CloseWindow();
+        if(!onlyHide)
+        {
+            GetComponentInParent<DesktopWindow>().CloseWindow();
+        }
+        else
+        {
+            transform.parent.gameObject.SetActive(false);
+        }
     }
 }
