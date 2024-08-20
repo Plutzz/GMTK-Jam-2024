@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -16,6 +17,8 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private Sprite darkModeWallpaper;
     [SerializeField] private Sprite monkeyMissingWallpaper;
     [SerializeField] private SpriteRenderer desktopWallPaper;
+    [SerializeField] private Light2D globalLight;
+    [SerializeField] private GameObject playerLight;
     [HideInInspector] public bool darkModeEnabled;
 
 
@@ -72,5 +75,7 @@ public class GameManager : Singleton<GameManager>
     {
         darkModeEnabled = true;
         desktopWallPaper.sprite = darkModeWallpaper;
+        playerLight.SetActive(true);
+        globalLight.intensity = 0f;
     }
 }
