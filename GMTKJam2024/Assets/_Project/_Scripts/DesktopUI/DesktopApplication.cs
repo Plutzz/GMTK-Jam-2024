@@ -30,7 +30,7 @@ public class DesktopApplication : BaseApplication
         if (!GameManager.Instance.completedDiscordexe && applicationName == "Chrome.exe")
         {
             // chrome dialogue
-            dialogueForChrome.SetActive(true);
+            dialogueForChrome?.SetActive(true);
             return;
         }
 
