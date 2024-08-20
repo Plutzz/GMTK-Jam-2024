@@ -30,6 +30,7 @@ public class DialogueManager : Singleton<DialogueManager>
         base.Awake();
         sentences = new Queue<string>();
         characterRend = characterImage.GetComponent<SpriteRenderer>();
+        gameObject.SetActive(false);
     }
 
 
