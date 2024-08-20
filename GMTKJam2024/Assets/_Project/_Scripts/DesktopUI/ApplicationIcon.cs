@@ -5,7 +5,7 @@ using UnityEngine;
 public class ApplicationIcon : MonoBehaviour
 {
     [SerializeField] private GameObject highlight;
-    [SerializeField] private DesktopApplication application;
+    [SerializeField] private BaseApplication application;
 
     private void OnMouseEnter()
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class DesktopApplication : MonoBehaviour
+public class DesktopApplication : BaseApplication
 {
     [SerializeField] private string applicationName;
     [SerializeField] private GameObject applicationWindowPrefab;
@@ -12,7 +12,7 @@ public class DesktopApplication : MonoBehaviour
     [SerializeField] private Vector2 initWindowSize;
     public Level activeLevel;
     private DesktopWindow window;
-    public void StartApplication()
+    public override void StartApplication()
     {
         if(window != null)
         {
