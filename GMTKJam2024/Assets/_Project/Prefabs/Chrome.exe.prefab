@@ -861,7 +861,19 @@ MonoBehaviour:
   resetWindowPosition: {x: 0, y: 0.5, z: 0}
   actionOnStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8418933504059312961}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   actionOnComplete:
     m_PersistentCalls:
       m_Calls: []
@@ -2118,6 +2130,39 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 4143722536386711037}
+--- !u!1 &4179225632533995535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7781991043630607574}
+  m_Layer: 0
+  m_Name: Dialogues
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7781991043630607574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4179225632533995535}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2015871601465456191}
+  - {fileID: 7756105626395699020}
+  m_Father: {fileID: 2392232813738067330}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4344935616882921546
 GameObject:
   m_ObjectHideFlags: 0
@@ -3932,6 +3977,86 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: 0, y: -0.5, z: 0}
     m_Extent: {x: 0.5, y: 1, z: 0}
+--- !u!1 &6726657397670581759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2015871601465456191}
+  - component: {fileID: 7851112544482555471}
+  m_Layer: 0
+  m_Name: ChromeEarly
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2015871601465456191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6726657397670581759}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7781991043630607574}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7851112544482555471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6726657397670581759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77ae77ebe8eae74f8875ec1468cb5e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - characterSprite: {fileID: -1715154809, guid: 4fb2a0ebbf1232545a57081a43452513, type: 3}
+    actionOnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+    skippableByClick: 1
+    sentences:
+    - Wait wait!!
+  - characterSprite: {fileID: -1614739278, guid: 4fb2a0ebbf1232545a57081a43452513, type: 3}
+    actionOnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+    skippableByClick: 1
+    sentences:
+    - Dont play this one yet.
+  - characterSprite: {fileID: 1664604887, guid: 4fb2a0ebbf1232545a57081a43452513, type: 3}
+    actionOnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+    skippableByClick: 1
+    sentences:
+    - Im still working out all the quirks
+  - characterSprite: {fileID: -1614739278, guid: 4fb2a0ebbf1232545a57081a43452513, type: 3}
+    actionOnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+    skippableByClick: 1
+    sentences:
+    - Toodles!
+  - characterSprite: {fileID: -1614739278, guid: 4fb2a0ebbf1232545a57081a43452513, type: 3}
+    actionOnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+    skippableByClick: 1
+    sentences:
+    - "\u2026"
 --- !u!1 &6839979289162809008
 GameObject:
   m_ObjectHideFlags: 0
@@ -4632,6 +4757,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7781991043630607574}
   - {fileID: 2026644980220595367}
   - {fileID: 7771851428469253951}
   - {fileID: 3970665539831501825}
@@ -4649,7 +4775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0b3a6cad6dd3184ab63acf3f0824f29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applicationName: Discord.exe
+  applicationName: Chrome.exe
   applicationWindowPrefab: {fileID: 3791836874618446992, guid: dd7f7fd9440950c4ba3f03a0416cecb1, type: 3}
   firstLevel: {fileID: 2929098962537537248}
   background: {fileID: 3954890345830437706}
@@ -4658,7 +4784,10 @@ MonoBehaviour:
   monkeyIcons: {fileID: 0}
   chromeIcon: {fileID: 3682114281745429240}
   discordIcon: {fileID: 0}
-  dialogueForChrome: {fileID: 0}
+  settingsIcon: {fileID: 0}
+  folderIcon: {fileID: 0}
+  dialogueForChrome: {fileID: 6726657397670581759}
+  music: {fileID: 0}
 --- !u!1 &7785465695645224722
 GameObject:
   m_ObjectHideFlags: 0
@@ -6757,6 +6886,72 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 8332690088457659343}
+--- !u!1 &8418933504059312961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7756105626395699020}
+  - component: {fileID: 8741648291797980070}
+  m_Layer: 0
+  m_Name: DialogueSequence1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &7756105626395699020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8418933504059312961}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7781991043630607574}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8741648291797980070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8418933504059312961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77ae77ebe8eae74f8875ec1468cb5e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - characterSprite: {fileID: -1715154809, guid: 4fb2a0ebbf1232545a57081a43452513, type: 3}
+    actionOnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+    skippableByClick: 1
+    sentences:
+    - Neato, you found my spare firewalls!
+  - characterSprite: {fileID: 1664604887, guid: 4fb2a0ebbf1232545a57081a43452513, type: 3}
+    actionOnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+    skippableByClick: 1
+    sentences:
+    - Meant to clean those up, but I got busy.
+  - characterSprite: {fileID: 124646743, guid: 4fb2a0ebbf1232545a57081a43452513, type: 3}
+    actionOnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+    skippableByClick: 1
+    sentences:
+    - "MMake sure you keep \u2018em in mint condition, will ya?"
 --- !u!1 &8501973736026362568
 GameObject:
   m_ObjectHideFlags: 0
