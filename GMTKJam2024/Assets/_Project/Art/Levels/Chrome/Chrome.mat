@@ -28,11 +28,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _CreepyNormal:
-        m_Texture: {fileID: 2800000, guid: 9d259e71a26ebc043958f2009c54de61, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7afe9702d9ee34748bd53dc33585b222, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CreepyTexture:
-        m_Texture: {fileID: 2800000, guid: 64096486ee28aec4290623392ae5ef99, type: 3}
+        m_Texture: {fileID: 2800000, guid: 22ed88676447c05468e16f67938cfb82, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
