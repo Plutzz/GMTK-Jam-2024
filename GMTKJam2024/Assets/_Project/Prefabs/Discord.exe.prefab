@@ -6352,7 +6352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0b3a6cad6dd3184ab63acf3f0824f29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applicationName: Discord.exe
+  applicationName: Biscord.exe
   applicationWindowPrefab: {fileID: 3791836874618446992, guid: dd7f7fd9440950c4ba3f03a0416cecb1, type: 3}
   firstLevel: {fileID: 0}
   background: {fileID: 5162149264256699298}
@@ -9223,7 +9223,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 62273804012112406, guid: b4fda3549f2212d42a27c7eba151743c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.73
+      value: -5.8
       objectReference: {fileID: 0}
     - target: {fileID: 62273804012112406, guid: b4fda3549f2212d42a27c7eba151743c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9299,7 +9299,7 @@ PrefabInstance:
       objectReference: {fileID: 7595784909492212848}
     - target: {fileID: 8774272557012643403, guid: b4fda3549f2212d42a27c7eba151743c, type: 3}
       propertyPath: m_text
-      value: Discord.exe
+      value: Biscord.exe
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6537283671626608785, guid: b4fda3549f2212d42a27c7eba151743c, type: 3}
