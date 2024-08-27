@@ -6,14 +6,22 @@ public class CoinCollection : MonoBehaviour, IResetable
 {
     [SerializeField] private int coinId;
     [SerializeField] private Animator anim;
+    [SerializeField] private GameObject filledGem, emptyGem;
     
 
     public void ResetObject()
     {
         if (GameManager.Instance.coinCollector.collectedCoins[coinId])
         {
-            gameObject.SetActive(false);
+            filledGem.SetActive(false);
+            emptyGem.SetActive(true);
         }
+        else
+        {
+            filledGem.SetActive(true);
+            emptyGem.SetActive(false);
+        }
+
         gameObject.SetActive(true);
 
     }
