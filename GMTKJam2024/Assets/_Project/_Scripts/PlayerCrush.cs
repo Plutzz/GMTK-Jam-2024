@@ -26,7 +26,7 @@ public class PlayerCrush : MonoBehaviour
 
     private void Update()
     {
-        if(!touchingSafe)
+        if (!touchingSafe)
         {
             killable = true;
         }
@@ -46,6 +46,7 @@ public class PlayerCrush : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+
         if (collision.gameObject.CompareTag("Safe"))
         {
             touchingSafe = true;
